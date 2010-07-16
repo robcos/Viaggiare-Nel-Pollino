@@ -1,0 +1,7 @@
+
+{% load box %}
+   {% smallbox %}
+   <h1>Some title</h1>
+   some text that has to go in the box
+   {% endbox%}
+

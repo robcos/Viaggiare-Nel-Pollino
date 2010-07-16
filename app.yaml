@@ -1,0 +1,10 @@
+application: viaggiarenelpollino
+version: 7
+runtime: python
+api_version: 1
+default_expiration: "1d"
+
+
+handlers:
+- url: .*
+  script: django_bootstrap.py
