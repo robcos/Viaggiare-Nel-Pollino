@@ -16,7 +16,7 @@ class CallNode(template.Node):
    def render(self, context):
        try:
            template_name = self.template_name.resolve(context)
-           t = get_template('snippets/' + template_name)
+           t = get_template('../snippets/' + template_name)
            d = {}
            args = d['args'] = []
            kwargs = d['kwargs'] = {}

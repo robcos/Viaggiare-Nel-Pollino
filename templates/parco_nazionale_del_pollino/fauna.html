@@ -116,7 +116,7 @@
 			<div class="line"><br/></div>
 	<img src="fauna/mainColumnParagraphs/0/image/foto12557.jpg" class="contentImage_right" alt=""/>
 	<h2>Fauna</h2>
-<p>Gli antichi abitanti della Grotta del Romito ci ricordano, con il graffito, la presenza del <strong>Bue selvatico o Uro</strong> 12.000 anni fa; viaggiatori nel Pollino del XXI e dei primi del XX secolo descrivono cacce al <a href="http://localhost:8080/letture/cervo"><strong>Cervo</strong> </a>&nbsp;(reintrodotto nel2003) e all'<strong>Orso</strong> e addirittura citano la presenza della <strong>Lince.</strong> I toponimi Timpa dell'Orso, Orsomarso, Monte&nbsp;Cerviero sembrano confermare ci&ograve; che narrano tali autori, cos&igrave; come il dipinto della visione della Madonna delle Armi, a Cerchiara di Calabria, raffigurante anche due cacciatori e un cervo.</p>
+<p>Gli antichi abitanti della Grotta del Romito ci ricordano, con il graffito, la presenza del <strong>Bue selvatico o Uro</strong> 12.000 anni fa; viaggiatori nel Pollino del XXI e dei primi del XX secolo descrivono cacce al <a href="/letture/cervo.html"><strong>Cervo</strong> </a>&nbsp;(reintrodotto nel2003) e all'<strong>Orso</strong> e addirittura citano la presenza della <strong>Lince.</strong> I toponimi Timpa dell'Orso, Orsomarso, Monte&nbsp;Cerviero sembrano confermare ci&ograve; che narrano tali autori, cos&igrave; come il dipinto della visione della Madonna delle Armi, a Cerchiara di Calabria, raffigurante anche due cacciatori e un cervo.</p>
 	</div>
 	<div style="clear:both;">
 			<br/><br/>
@@ -148,7 +148,7 @@
 			<div class="line"><br/></div>
 	<img src="fauna/mainColumnParagraphs/03/image/2249511439_64214deff3_m.jpg" class="contentImage_left" alt=""/>
 	<h2>Rettili</h2>
-<p>Tra i rettili pi&ugrave; importanti ricordiamo il <strong>Cervone</strong>, il pi&ugrave; grande e innocuo serpente d'Europa, il <strong>Colubro di Eusculapio</strong> e il <strong>Colubro leopardino,</strong> quest'ultimo considerato uno dei pi&ugrave; bei serpenti del mondo. La <strong><a href="http://localhost:8080/letture/madonna">Vipera</a> comune</strong> o <strong>Aspide</strong> &egrave; l'unico ofide velenoso presente nell'area del Parco. Comunissimi sono il <strong>Ramarro</strong> e la <strong>Lucertola</strong>, mentre il <strong>Geco</strong> &egrave; localizzato nei versanti pi&ugrave; caldi. <br/>
+<p>Tra i rettili pi&ugrave; importanti ricordiamo il <strong>Cervone</strong>, il pi&ugrave; grande e innocuo serpente d'Europa, il <strong>Colubro di Eusculapio</strong> e il <strong>Colubro leopardino,</strong> quest'ultimo considerato uno dei pi&ugrave; bei serpenti del mondo. La <strong><a href="/letture/madonna.html">Vipera</a> comune</strong> o <strong>Aspide</strong> &egrave; l'unico ofide velenoso presente nell'area del Parco. Comunissimi sono il <strong>Ramarro</strong> e la <strong>Lucertola</strong>, mentre il <strong>Geco</strong> &egrave; localizzato nei versanti pi&ugrave; caldi. <br/>
 </p>
 	</div>
 	<div style="clear:both;">
@@ -183,8 +183,6 @@
 	</div>
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">PRENOTA LA TUA ESCURSIONE</div>
-Compilate l'apposto modulo di <a href="../prenotazioni.html"><b>PRENOTAZIONE</b></a> per ricevere informazioni sui nostri servizi, riceverete una risposta entro 12-24 ore.<br/><b><br/>Informazioni telefoniche<br/></b><b>0973.669290<br/>347.2631462</b><br/>Ore ufficio dalle 14 alle 20
-	</div>
+ {% load call %}
+ {% call "prenota_visita.html" %}
 {% endblock %}

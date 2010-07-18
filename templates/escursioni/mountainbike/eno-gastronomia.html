@@ -183,4 +183,6 @@
 	</div>
 {% endblock %}
 {% block right %}
+ {% load call %}
+ {% call "prenota_visita.html" %}
 {% endblock %}
