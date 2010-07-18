@@ -26,7 +26,7 @@ def strip(header):
 def parent(url):
   bits =  url.split('/')
   if len(bits)>2:
-    return bits[1]
+    return bits[-2]
   return None
 
 def is_child(menu, current):
@@ -50,6 +50,8 @@ def is_ancestor(menu, current):
 def is_sibling(menu, current):
   #current /escursioni/camminare.html
   #menu /escursioni/trekking.html
+  #if(parent(menu) == parent(current)):
+  #  print "<br>" +menu + " _______" + parent(menu) + " ______" + current
   if(parent(menu) == parent(current)):
     return True
   return False
