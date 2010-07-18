@@ -31,6 +31,7 @@ import django
 from django import http
 from django import shortcuts
 from django.http import HttpResponseRedirect
+from django.http import HttpResponseNotFound
 
 # Python
 import logging
@@ -40,13 +41,16 @@ import datetime
 
 def legacy(request):
   path = os.path.join(request.get_full_path()[1:])
+   
+  # all files beginning with _ are to be considered private
+  if re.match("_.*", path):
+    return HttpResponseNotFound("404 - Not found")
 
   if path == "index.html":
     return HttpResponseRedirect("/")
   if path == "":
     path = "index.html"
   response = shortcuts.render_to_response(path, {})
-  
   if re.match(".*\.jpe?g", path):
     response['Content-Type'] = 'image/jpeg'
     cache_headers(response)
