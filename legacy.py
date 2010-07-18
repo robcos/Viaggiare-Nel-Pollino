@@ -50,7 +50,11 @@ def legacy(request):
     return HttpResponseRedirect("/")
   if path == "":
     path = "index.html"
-  response = shortcuts.render_to_response(path, {})
+  try:
+    response = shortcuts.render_to_response(path, {})
+  except TemplateDoesNotExist:
+    return HttpResponseNotFound("404 - Not found")
+
   if re.match(".*\.jpe?g", path):
     response['Content-Type'] = 'image/jpeg'
     cache_headers(response)
@@ -68,7 +72,6 @@ def legacy(request):
   return response
   
 def cache_headers(response):
-    return
     past = datetime.datetime.now() - datetime.timedelta(days=10)
     then = datetime.datetime.now() + datetime.timedelta(days=10)
     response['Last-Modified'] = past.ctime()

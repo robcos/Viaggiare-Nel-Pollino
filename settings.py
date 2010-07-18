@@ -84,10 +84,6 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
-ALLOWED_INCLUDE_ROOTS = (
-    '/Users/robcos/src/django_example/templates/snippets/'
-)
-
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.contenttypes',
