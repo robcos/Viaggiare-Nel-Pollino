@@ -1,0 +1,12 @@
+{% ifequal level 1 %}
+<div class="navLine"><br/></div>
+{% endifequal %}
+{% if visible %}
+<div class="nav{% ifequal path menupath %}Self{% endifequal %}{% ifequal level 1 %}TopLevel{% endifequal %}{% ifequal level 3 %}2{% endifequal %}">
+{% ifnotequal path menupath %}
+<a class="{{ anchorClass }}" href="{{menupath}}">{{title}}</a>
+{% else %}
+  {{title}}
+{% endifnotequal %}
+</div>
+{% endif %}
