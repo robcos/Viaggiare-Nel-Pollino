@@ -211,8 +211,6 @@ Si dividono in primarie e secondarie: le prime sono tutti le formazioni erbacee 
 	</div>
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">PRENOTA LA TUA ESCURSIONE</div>
-Compilate l'apposto modulo di <a href="../prenotazioni.html"><b>PRENOTAZIONE</b></a> per ricevere informazioni sui nostri servizi, riceverete una risposta entro 12-24 ore.<br/><b><br/>Informazioni telefoniche<br/></b><b>0973.669290<br/>347.2631462</b><br/>Ore ufficio dalle 14 alle 20
-	</div>
+ {% load call %}
+ {% call "prenota_visita.html" %}
 {% endblock %}

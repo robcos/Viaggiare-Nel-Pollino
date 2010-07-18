@@ -175,11 +175,8 @@ L'uomo: &quot;L'evoluzione culturale&quot;: visita alla Grotta del Romito.
 	</div>
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">PRENOTA LA TUA ESCURSIONE </div>
-Compilate l'apposto modulo di <a href="../prenotazioni.html"><b>PRENOTAZIONE</b></a> per ricevere informazioni sui nostri servizi, riceverete una risposta entro 12-24 ore.<br/><b><br/>Informazioni telefoniche<br/></b><b>0973.669290<br/>347.2631462</b><br/>Ore ufficio dalle 14 alle 20 <div class="line"><br/></div>
-<div class="line"><br/></div>
-	</div>
+ {% load call %}
+ {% call "prenota_visita.html" %}
 	<div style="clear:both;">
 		<div class="rightColumnTitle">Tariffe Escursioni Guidate nel Pollino e dintorni</div>
 Gruppi inferiori alle <b>7</b> persone <b>€ 20 </b>pro-capite<br/>Gruppi superiori<br/>Escursione guidata in alta montagna giornata intera <b>€ 150</b><br/>Gruppi scuola o tour turistici&nbsp; <b>€ 100</b><br/><br/><b>Riduzioni</b> non sono applicate nei mesi di Aprile e Maggio <br/><br/>La tariffa non comprende il prezzo di eventuali trasporti in auto, autobus, fuoristrada, cavallo, asino o altro mezzo diverso dalle proprie gambe, che restano a carico del cliente. Se necessario possono essere organizzate visite a bordo dei mezzi di trasporto summenzionati.

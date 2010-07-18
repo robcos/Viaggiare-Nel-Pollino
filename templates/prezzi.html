@@ -237,8 +237,6 @@ Pranzo &euro; 20 (in dipendenza del men&ugrave; e della stagione) <br/>
 	</div>
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">PRENOTA LA TUA VACANZA SUL POLLINO!</div>
-Compilate il<br/><a href="prenotazioni.html"><b>MODULO PER INFORMAZIONI</b></a>&nbsp; <br/>sui nostri servizi, riceverete una risposta entro 24-48 ore.>
-	</div>
+ {% load call %}
+ {% call "prenota_visita.html" %}
 {% endblock %}

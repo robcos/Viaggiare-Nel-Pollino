@@ -106,32 +106,21 @@
 </div>
 {% endblock %}
 {% block body %}
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="scuola/mainColumnParagraphs/0/image/1bis.jpg" class="contentImage_left" alt=""/>
-	<h2>Cosa può fare una scuola nel Parco Nazionale del Pollino?</h2>
+  {% load box %}
+  
+  {% local "Cosa può fare una scuola nel Parco Nazionale del Pollino?" "scuola/mainColumnParagraphs/0/image/1bis.jpg" left horizontal %}
 Una scuola durante una visita pu&ograve; gli argomenti trattati durante l'anno accademico, dal vivo, &quot;toccando con mano&quot; quanto studiato in Classe.<br/>
 <br/>
 I ragazzi di una scuola di uno dei comuni del parco pu&ograve; invece approfondire la cononoscenza del suo territorio, il territorio dei loro antenati, il territorio dove forse un giorno avranno l'opportunit&agrave; di vivere e lavorare.<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<h2>Gita Scolastica</h2>
+  {% endbox %}
+	{% contentbox "Gita Scolastica" %}
 Sulla pagina <a href="scuola/gita_scolastica.html">Gita Scolastica&nbsp; </a>trovere consigli su come orgaizzare un programma per le scuole nel Pollino. Nella prima parte un approfondimento dei temi che si posono affrontare, nella seconda suggerimenti di escursioni.<br/>
 <br/>
 <br/>
 Consulta le nostre proposte:<br/>
 <a href="scuola/gita_scolastica.html">Gita scolastica</a><br />Educazione Ambientale<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<h2>Attività sportive</h2>
+  {% endbox %}
+	{% contentbox "Attività sportive" %}
 Per chi ama il movimento...<br/>
 <br/>
 <strong>Gioco di Orientamento<br/>
@@ -142,19 +131,12 @@ L&rsquo;attivit&agrave; pu&ograve; essere svolta nei centri storici di Viggianel
 <br/>
 <strong>Rafting sul fiume Lao<br/>
 </strong>Facile esperienza di discesa del fiume a bordo di gommone con la LAO SRL da abbinare con passeggiata a Laino Borgo e sulle sponde del fiume Lao.</p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
+  {% endbox %}
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Prenota la tua gita scolastica</div>
-Usando l'apposito <a href="prenotazioni.html">modulo</a>&nbsp;riceverete una risposta entro 12-24 ore o telefonate allo 0973.669290 - 347.2631462
-<div class="line"><br/></div>
-	</div>
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Tariffe</div>
+ {% load call %}
+ {% call "prenota_visita.html" %}
+ {% smallbox Tariffe %}
 <b>Guida del Parco</b>:&nbsp; € 100 giornata intera, € 80 mezza giornata.<br/><b>Rafting:</b> € 13,50<br/><b>Arrampicata sportiva</b>: € 250 per gruppo gita (riduzioni se inferiore ai 20)<br/><b>Museo di Storia Naturale di Rotonda</b>: €&nbsp; 1,00 ognuno (2 € per gli adulti).<br/><b>Grotta del Romito - Papasidero</b>: €&nbsp; 2,00 ognuno (compreso servizio navetta, per organizzare servizio navetta chiamare municipio di Papasidero (0981.83107).<br/><b>C. S. Naturalistici “Il NIBBIO” di Morano Calabro</b>:Gruppi&nbsp; €&nbsp; 2,00 - Singoli  € 3,00<br/><b>Museo della Cultura Aberësh</b>: adulti €&nbsp; 3,00, scuole € 2,50, Laboratorio didattico €&nbsp;&nbsp; 5,00 <br/><b>Gioco di orientamento</b>: € 100<br/><b>Osservazione del cielo</b>: € 1,00 ognuno<br/><b>Laboratorio caseificazione:</b> € 1,00 ognuno<br/><b>Visita allevamento produzione latte d’Asina</b>: € 1,00 ognuno<br/><b>Alberghi</b>: generalmente applicano tariffe speciali per le gite scolastiche; vi consiglieremo strutture che per posizione geografica, logistica interna ed esperienza professionale sono adatte al turismo scolastico e al vostro specifico programma.<br/>Pensione completa € 24<br/>Mezza pensione € 20<br/>Pranzo € 10 - 12<b><br/><br/></b>
-	</div>
+  {% endbox %}
 {% endblock %}

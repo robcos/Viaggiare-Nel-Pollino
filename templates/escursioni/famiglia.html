@@ -160,11 +160,8 @@ Trekking con l&rsquo;asino &ndash; Passeggiata al panoramico Santuario della Mad
 	</div>
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Prenota la tua escursione</div>
-Compilate l'apposto modulo di <a href="../prenotazioni.html"><b>PRENOTAZIONE</b></a> per ricevere informazioni sui nostri servizi, riceverete una risposta entro 12-24 ore.<br/><b><br/>Informazioni telefoniche<br/></b><b>0973.669290<br/>347.2631462</b><br/>Ore ufficio dalle 14 alle 20
-<div class="line"><br/></div>
-	</div>
+ {% load call %}
+ {% call "prenota_visita.html" %}
 	<div style="clear:both;">
 		<div class="rightColumnTitle">Tariffe Trekking per famiglie</div>
 Adulti <b>€ 45.00</b>, ragazzi fino a 16 anni <b>€ 22.50</b> al giorno<br/>Nella quota sono comprese le seguenti voci<br/><br/>1. un pernottamento con prima colazione<br/>2. un pranzo al sacco<br/>3. una merenda al rientro dall'escursione <br/>4. una escursione guidata nel Parco<br/>5. uso della cucina attrezzata<br/>6. consumo prodotti aziendali<br/>7. discesa rafting facile e/o escursione con l’asino<br/><br/>Il trekking per famiglie prevede l’accettazione di un programma di almeno 4 giorni.<br/>Per gruppi plurifamiliari è possibile effettuare lo stesso programma con diversa sistemazione.
