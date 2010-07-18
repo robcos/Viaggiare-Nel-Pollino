@@ -156,7 +156,7 @@
   ********************************************************* -->
 
   <!-- Exclude URLs that end with a '~'   (IE: emacs backup files)      -->
-  <filter  action="drop"  type="wildcard"  pattern="/snippets/*.html"           />
+  <filter  action="drop"  type="wildcard"  pattern="*base.html"           />
   <filter  action="pass"  type="wildcard"  pattern="*.html"           />
   <filter  action="drop"  type="wildcard"  pattern="*"           />
   <filter  action="drop"  type="wildcard"  pattern="*~"           />
