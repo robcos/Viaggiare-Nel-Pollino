@@ -111,6 +111,7 @@ a.navPath,.navSelf,.navSelfTopLevel
 
 #sub {
 	width: 697px;
+	_width: 700px; /* ie hack */
 	float:left;
 }
 
@@ -137,13 +138,12 @@ a.navPath,.navSelf,.navSelfTopLevel
   padding-left:20px;
 }
 
-#contentDivRightColumn
-	{
-	width:217px;
-	float:right;
-	padding: 3px 10px 10px 10px;
-	padding-left: 0;
-	}
+#contentDivRightColumn {
+  width:217px;
+  float:right;
+  padding: 3px 10px 10px 0px;
+  _padding: 2px; /* ie 6 hack */
+}
 
 
 .rightColumnTitle
