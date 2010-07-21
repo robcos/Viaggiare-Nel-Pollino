@@ -215,7 +215,11 @@ input.checkbox, input.radio
 	}
 	
 #content {
-	border-width: 2px;
+  border-width: 3px;
+  -moz-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  behavior: url(/border-radius.htc);
 	width: 927px;
 	text-align:justify;
 	margin-right:auto;
@@ -295,11 +299,15 @@ p.important {
 
 /* common */
 .sidebar-box {
-    padding:0;
-    width:218px;
-    font-size:10px;
-    margin-bottom:8px;
-    border: 2px solid green;
+  padding:0;
+  width:218px;
+  font-size:10px;
+  margin-bottom:8px;
+  border: 2px solid green;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  behavior: url(/border-radius.htc);
 }
 
 .sidebar-box .content {
@@ -342,7 +350,7 @@ padding-top:2px;
 }
 
 #site-title {
-  color:green;
+  color:transparent;
   font-size:17px;
   margin:auto;
   top:18px;
