@@ -51,7 +51,7 @@ def legacy(request):
   if path == "":
     path = "index.html"
   try:
-    response = shortcuts.render_to_response(path, {'path': '/' + path})
+    response = shortcuts.render_to_response(path, {})
   except TemplateDoesNotExist:
     return HttpResponseNotFound("404 - Not found")
 
