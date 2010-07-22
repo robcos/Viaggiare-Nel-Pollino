@@ -48,7 +48,7 @@ def do_flickr(parser, token):
 
 def do_smallbox(parser, token):
     nodelist = parser.parse(('endbox',))
-    tag_name, header = token.contents.split(None,1)
+    tag_name, header = map(strip, token.contents.split(None,1))
 
     parser.delete_first_token()
     return SmallBoxNode(nodelist, header, "smallbox.html")
