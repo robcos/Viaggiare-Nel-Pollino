@@ -33,7 +33,7 @@
 -->
 <site
   base_url="http://www.viaggiarenelpollino.com/"
-  store_into="../templates/sitemap.xml.gz"
+  store_into="templates/sitemap.xml.gz"
   verbose="1"
   >
 
@@ -92,7 +92,7 @@
   <directory  path="/var/www/icons"    url="http://www.example.com/images/" />
   -->
   <directory
-     path="../templates/"
+     path="templates/"
      url="http://www.viaggiarenelpollino.com/"
      default_file="index.html"
   />
