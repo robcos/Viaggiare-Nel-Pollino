@@ -4,6 +4,7 @@ import os
 import re
 import tokenize
 import StringIO
+from datetime import date
 
 register = template.Library()
 
@@ -45,6 +46,12 @@ def do_flickr(parser, token):
     href = "http://www.flickr.com/photos/pollino/" + photo_id
 
     return FlickrNode(nodelist, title, href, img, side, width, height)
+
+def do_only_on_month(parser, token):
+    nodelist = parser.parse(('end_only_on_month',))
+    months= list(token.split_contents())[1:]
+    parser.delete_first_token()
+    return OnlyOnMonthNode(nodelist, months)
 
 def do_smallbox(parser, token):
     nodelist = parser.parse(('endbox',))
@@ -163,8 +170,19 @@ class SmallBoxNode(template.Node):
     return app_template.render(os.path.join(os.path.dirname(__file__), 
       self.template), { "header": self.header, "content": output})
 
+class OnlyOnMonthNode(template.Node):
+  def __init__(self, nodelist, months):
+    self.nodelist = nodelist
+    self.months = months
+
+  def render(self, context):
+    if(str(date.today().month) in self.months):
+      return self.nodelist.render(context)
+    return ""
+
 register.tag('smallbox', do_smallbox)
 register.tag('contentbox', do_contentbox)
 register.tag('flickr', do_flickr)
 register.tag('local', do_local)
 register.tag('snippet', do_call)
+register.tag('only_on_month', do_only_on_month)
