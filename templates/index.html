@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}
-	VIAGGIARE NEL PARCO NAZIONALE DEL POLLINO
+Viaggiare nella Basilicata Selvaggia
 {% endblock %}
 {% block nav %}
 <div class="navLine"><br/></div>
@@ -106,13 +106,24 @@
 {% block body %}
 {% load box %}
 {% load call %}
+
+{% only_on_month 9 10 11 12 1 2 %}
 {% contentbox "L'Autunno sinfonia di colori" %}
 <a href="http://www.flickr.com/photos/pollino/2955233579/" title="Timpone della Capanna in Autunno
 di Pollino Kombat di Giuseppe Cosenza, su Flickr"><img width="500" height="375"
 src="http://farm4.static.flickr.com/3179/2955233579_1de3db98e3.jpg" alt="Timpone della Capanna in
 Autunno"/></a> &nbsp; <br/>
-Per escursione guidate telefonare al 347.2631462 <br/>
+<p class="important">Per escursione guidate nel Pollino telefonare al 347.2631462</p>
 {% endbox %}
+{% end_only_on_month %}
+{% only_on_month 6 7 8 3 4 5 %}
+{% contentbox "Viaggiare nel Pollino" %}
+<img src="cartolina.jpg"/>
+<p class="important">Per escursione guidate nel Pollino telefonare al 347.2631462</p>
+{% endbox %}
+{% end_only_on_month %}
+
+
 {% contentbox "Rotonda" %}
 <img src="index/mainColumnParagraphs/01/image/rotonda_web.jpg" class="contentImage_right" alt=""/>
 Caratteristico centro medioevale della Basilicata, ricco di
