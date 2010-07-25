@@ -24,34 +24,19 @@ def strip(header):
   return header
  
 def parent(url):
-  bits =  url.split('/')
-  if len(bits)>2:
-    return bits[-2]
-  return None
+  parent, sep, after =  url.rpartition('/')
+  return parent
 
 def is_child(menu, current):
-  #current /escursioni
-  #menu /escursioni/trekking.html
-  menu = menu.replace('.html', '') 
-  current = current.replace('.html', '') 
   bits = menu.split('/');
-  if(bits[-2] == current[1:]):
+  if(('/'.join(bits[0:-1])) == '/' + current[1:]):
     return True
   return False
 
 def is_ancestor(menu, current):
-  #current /escursioni/trekking
-  #menu /escursioni
-  menu = menu.replace('.html', '') 
-  current = current.replace('.html', '') 
-  bits = menu.split('/');
   return current.find(menu) == 0
 
 def is_sibling(menu, current):
-  #current /escursioni/camminare.html
-  #menu /escursioni/trekking.html
-  #if(parent(menu) == parent(current)):
-  #  print "<br>" +menu + " _______" + parent(menu) + " ______" + current
   if(parent(menu) == parent(current)):
     return True
   return False
@@ -64,17 +49,22 @@ class MenuNode(template.Node):
 
   def render(self, context):
     context.update(self.context)
-    path = context['path'];
-    menupath = context['menupath'];
+    path = context['path'].replace('.html', '')
+    menupath = context['menupath'].replace('.html', '')
     if(path == '/index.html'):
       context['path'] = '/'
-    if(context['level'] == 1 or 
+    if(
+        context['level'] == 1 or 
         is_child(menupath, path) or 
+        is_ancestor(menupath, path) or 
+        #is_ancestor(menupath.split('/')[1], path) or 
+        is_sibling(menupath, parent(path)) or 
         is_sibling(menupath, path) 
         ):
       context['visible'] = True
     else:
       context['visible'] = False
+      
     if menupath != '/' and is_ancestor(menupath, path):
       context['anchorClass'] = "navPath"
     else:
