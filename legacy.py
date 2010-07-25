@@ -55,17 +55,23 @@ def legacy(request):
   except TemplateDoesNotExist:
     return HttpResponseNotFound("404 - Not found")
 
-  if re.match(".*\.jpe?g", path):
+  if re.match(".*\.jpe?g$", path):
     response['Content-Type'] = 'image/jpeg'
     cache_headers(response)
-  elif re.match(".*\.gif", path):
+  elif re.match(".*\.gif$", path):
     response['Content-Type'] = 'image/gif'
     cache_headers(response)
-  elif re.match(".*\.xml", path):
+  elif re.match(".*\.xml$", path):
     response['Content-Type'] = 'application/atom+xml'
     cache_headers(response)
-  elif re.match(".*\.css", path):
+  elif re.match(".*\.xml.gz$", path):
+    response['Content-Type'] = 'application/x+gzip'
+    cache_headers(response)
+  elif re.match(".*\.css$", path):
     response['Content-Type'] = 'text/css'
+    cache_headers(response)
+  elif re.match(".*\.txt$", path):
+    response['Content-Type'] = 'text/plain'
     cache_headers(response)
   else:
     response['Content-Type'] = 'text/html'
