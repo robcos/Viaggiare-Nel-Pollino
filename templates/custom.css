@@ -1,0 +1,24 @@
+#doc4 {
+  background: white;
+  border: solid green 3px;
+  -moz-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0 0 0 0;
+	text-align:center;
+	background-image:url('/imgs/back.jpg');
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#disclaimer {
+	xfloat:right;
+	margin-left:10px;
+  color:black;
+  right:0px;
+  position:relative;
+}
