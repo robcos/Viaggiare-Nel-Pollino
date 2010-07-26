@@ -1,52 +1,54 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="keywords" content="">
-<meta name="description" content="">
-<title>CSS Layout</title>
-<link rel="stylesheet" type="text/css" href="reset-fonts-grids.css">
-<link rel="stylesheet" type="text/css" href="base.css">
-<link rel="stylesheet" type="text/css" href="custom.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="it"/>
+  <meta name="description" content="Informazioni sul Pollino"/>
+  <meta name="keywords" content="Pollino, Agriturismo, Guida, Parco Nazionale del Pollino, Escursioni, Trekking, Visite Guidate, Rafting, basilicata, rotonda, potenza, lucania, calabria, pino loricato"/>
+  <meta name="google-site-verification" content="2in8mPKASoP8hrAQzXu_8l07UoWD0gkwEoj65VoTQCE" />
+  <title>{% block title %} {% endblock %} | Viaggiare Nel Pollino</title>
+  <link rel="stylesheet" type="text/css" href="reset-fonts-grids.css">
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <link rel="stylesheet" type="text/css" href="custom.css">
 </head>
 <body>
-<div id="doc4" class="yui-t5">
-	<div id="hd">
-		<!-- MASTHEAD -->
+<div id="doc4" class="yui-t2">
+  <div id="hd">
+    <!-- MASTHEAD START -->
     <div id="headerImage"><img src="/docroot/samples/imgs/header.jpg" alt="Pollino - Logo"/><br/></div>
-		<!-- MASTHEAD END -->
-	</div>
-	<div id="bd">
-		<div id="yui-main">
-			<div class="yui-b">
-				<div class="yui-gf">
-					<div class="yui-u first">
-						<!-- LEF COLUMN -->
-            {% include "_menu.html" %}
-            <div class="navLine"><br/></div>
-            {% include "_leftad.html" %}
-						<!-- LEF COLUMN END-->
-       		</div>
-					<div class="yui-u">
-						<!-- MAIN COLUMN 2 -->
+    <!-- MASTHEAD END -->
+  </div>
+  <div id="bd">
+    <div id="yui-main">
+      <div class="yui-b">
+        <div class="yui-ge">
+          <div class="yui-u first">
+            <!-- MAIN COLUMN 1 START -->
             {% block body %} Body {% endblock %}
-						<!-- MAIN COLUMN 2 END-->
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="yui-b">
-			<!-- SECONDARY COLUMN -->
-      {% block right%} right {% endblock %}
-      {% include "_right.html" %}
-			<!-- SECONDARY COLUMN END -->
-		</div>
-	</div>
-	<div id="ft">
-		<!-- PUT FOOTER CODE HERE -->
+            <!-- MAIN COLUMN 1 END -->
+          </div>
+          <div class="yui-u">
+            <!-- MAIN COLUMN 2 START -->
+            {% block right%} right {% endblock %}
+            {% include "_right.html" %}
+            <!-- MAIN COLUMN 2 END -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="yui-b">
+      <!-- SECONDARY COLUMN START -->
+      {% include "_menu.html" %}
+      <div class="navLine"><br/></div>
+      {% include "_leftad.html" %}
+      <!-- SECONDARY COLUMN END -->
+    </div>
+  </div>
+  <div id="ft">
+    <!-- FOOTER START -->
     {% include "_footer.html" %}
-	</div>
+    <!-- FOOTER END -->
+  </div>
 </div>
 </body>
 </html>
-
