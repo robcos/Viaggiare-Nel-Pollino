@@ -158,6 +158,12 @@ a.struttura {
   font-weight: bold;
 }
 
+p.struttura {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 2em;
+}
+
 .content-box .content {
 }
 
@@ -196,4 +202,8 @@ p.important {
   font-style: italic;
   font-weight: bold;
   
+}
+
+li {
+  padding-bottom: 0.5em;
 }

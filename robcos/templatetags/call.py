@@ -58,15 +58,12 @@ def do_call(parser, token):
    if argslist:
      nal = []
      for idx, val in enumerate(argslist):
-       if '=' in val:
-         nal.append(val)
-         continue
-       if idx+1 < len(argslist) and '=' not in argslist[idx+1]:
-         if len(nal):
-           nal[-1] = nal[-1] + " " + val
-     if len(nal)>1:
-       nal[-1] = nal[-1] + " " + argslist[-1]
-     #raise template.TemplateSyntaxError, nal
+      if '=' in val:
+        nal.append(val)
+      else:
+        if len(nal)>1:
+          nal[-1] = nal[-1] + " " + val
+      
      argslist = nal
      for i in argslist:
          if '=' in i:
