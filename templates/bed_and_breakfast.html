@@ -5,30 +5,30 @@
 {% block body %}
   {% load box %}
   {% load call %}
-	{% local "Una vacanza in un'area naturale protetta..." "bed_and_breakfast/mainColumnParagraphs/00/image/castello_rotonda.jpg" right horizontal %}
+	{% local "Una vacanza in un'area naturale protetta..." "/bed_and_breakfast/mainColumnParagraphs/00/image/castello_rotonda.jpg" right horizontal %}
 ...senza perdersi l'accogliente e tranquilla vita degli antichi scorci del centro storico.   <br/>
 <br/>
 <br/>
 Liberi di uscire la sera, di tornare tardi, di mangiare nel ristorante che preferite, di cucinarvi da soli.
   {% endbox %}
-
-	{% local "Bed and Breakfast Al Vecchio Camino" "bed_and_breakfast/mainColumnParagraphs/0/image/camino.jpg" left horizontal %}
+    
+	{% local_linked "Bed and Breakfast Al Vecchio Camino" "/bed_and_breakfast/mainColumnParagraphs/0/image/camino.jpg" left horizontal "/bed_and_breakfast/vecchio_camino.html" %}
   A poche centinaia di metri dalla piazza principale di Rotonda.
-    {% call "struttura.html" href="bed_and_breakfast/vecchio_camino.html" name="B&amp;B Al Vecchio Camino" %}
+    {% call "struttura.html" href="/bed_and_breakfast/vecchio_camino.html" name="B&amp;B Al Vecchio Camino" %}
   {% endbox %}
-	{% local "Bed and Breakfast Luisella" "bed_and_breakfast/mainColumnParagraphs/01/image/luisella.jpg" right horizontal %}
+	{% local_linked "Bed and Breakfast Luisella" "/bed_and_breakfast/mainColumnParagraphs/01/image/luisella.jpg" right horizontal "/bed_and_breakfast/luisella.html" %}
   Piccolo ma confortevole Bed &amp; Breakfast nel centro storico di Rotonda.<br/>
-    {% call "struttura.html" href="bed_and_breakfast/vecchio_camino.html" name="B&amp;B Luisella" %}
+    {% call "struttura.html" href="/bed_and_breakfast/vecchio_camino.html" name="B&amp;B Luisella" %}
   {% endbox %}
-	{% local "Bed and Breakfast Pieffe" "bed_and_breakfast/mainColumnParagraphs/03/image/fuori_8.jpg" left horizontal %}
+	{% local_linked "Bed and Breakfast Pieffe" "/bed_and_breakfast/mainColumnParagraphs/03/image/fuori_8.jpg" left horizontal "/bed_and_breakfast/bbpieffe.html" %}
 A Frascineto, nel versante sud del Parco Nazionale del Pollino a pochi Km dal Canyon del Raganello e dal Mar Jonio<br/>
-    {% call "struttura.html" href="bed_and_breakfast/bbpieffe.html" name="B&amp;B Pieffe" %}
+    {% call "struttura.html" href="/bed_and_breakfast/bbpieffe.html" name="B&amp;B Pieffe" %}
   {% endbox %}
 
-	{% local "Bed and Breakfast La Soffitta del Barone" "bed_and_breakfast/mainColumnParagraphs/04/image/3670373439_cd40939eb3_m.jpg" right horizontal %}
+	{% local_linked "Bed and Breakfast La Soffitta del Barone" "/bed_and_breakfast/mainColumnParagraphs/04/image/3670373439_cd40939eb3_m.jpg" right horizontal "/bed_and_breakfast/soffitta_del_barone.html" %}
 A Mormanno tra Valle del Lao, L'Orsomarso e il Pollino.<br/>
 <br/>
-    {% call "struttura.html" href="bed_and_breakfast/soffitta_del_barone.html" name="B&amp;B La Soffitta del Barone" %}
+    {% call "struttura.html" href="/bed_and_breakfast/soffitta_del_barone.html" name="B&amp;B La Soffitta del Barone" %}
   {% endbox %}
 {% endblock %}
 {% block right %}

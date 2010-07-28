@@ -26,6 +26,25 @@ def do_local(parser, token):
 
     return FlickrNode(nodelist, title, None, img, side, width, height, "local_contentbox.html")
 
+def do_local_linked(parser, token):
+    nodelist = parser.parse(('endbox',))
+    parser.delete_first_token()
+    tag_name, title, img, side, orientation, link = token.split_contents()
+    title = strip(title) 
+    img = strip(img) 
+    side = strip(side) 
+    orientation = strip(orientation) 
+    link = strip(link) 
+    if orientation == "vertical":
+      height = "240"
+      width = "180"
+    else:
+      height = "180"
+      width = "240"
+    #img = "http://farm5.static.flickr.com/" + img
+
+    return FlickrNode(nodelist, title, None, img, side, 
+        width, height, "local_linked_contentbox.html", link)
 
 def do_flickr(parser, token):
     nodelist = parser.parse(('endbox',))
@@ -122,7 +141,7 @@ def strip(header):
   return header
  
 class FlickrNode(template.Node):
-  def __init__(self, nodelist, title, href, src, side, width, height, template="flickr_contentbox.html"):
+  def __init__(self, nodelist, title, href, src, side, width, height, template="flickr_contentbox.html", link=None):
     self.nodelist = nodelist
     self.title = title
     self.href = href
@@ -131,13 +150,14 @@ class FlickrNode(template.Node):
     self.width = width
     self.height = height
     self.template = template
+    self.link = link
 
   def render(self, context):
     output = self.nodelist.render(context)
     return app_template.render(os.path.join(os.path.dirname(__file__), self.template),
         { "title": self.title, "href": self.href, "src": self.src, 
         "side": self.side, "height": self.height, "width" : self.width,
-        "header": self.title, "content": output})
+        "header": self.title, "content": output, "link": self.link})
 
 class SnippetNode(template.Node):
   def __init__(self, template_name, *args, **kwargs):
@@ -184,5 +204,6 @@ register.tag('smallbox', do_smallbox)
 register.tag('contentbox', do_contentbox)
 register.tag('flickr', do_flickr)
 register.tag('local', do_local)
+register.tag('local_linked', do_local_linked)
 register.tag('snippet', do_call)
 register.tag('only_on_month', do_only_on_month)
