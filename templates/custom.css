@@ -2,6 +2,7 @@
   font-size: 13px
   1px -> 0.0769em
   4px -> 0.3076em
+  8px -> 0.6144em
 */
 #doc4 {
   background: white;
@@ -175,8 +176,8 @@ h1 {
 
 .content-box h2 {
   line-height: 1.2em;
-  margin-top: 0.6076em;
-  margin-bottom: 0.3076em;
+  margin-top: 0.6144em;
+  margin-bottom: 0.6144em;
 }
 
 ul.phones {
