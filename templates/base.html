@@ -7,15 +7,15 @@
   <meta name="keywords" content="Pollino, Agriturismo, Guida, Parco Nazionale del Pollino, Escursioni, Trekking, Visite Guidate, Rafting, basilicata, rotonda, potenza, lucania, calabria, pino loricato"/>
   <meta name="google-site-verification" content="2in8mPKASoP8hrAQzXu_8l07UoWD0gkwEoj65VoTQCE" />
   <title>{% block title %} {% endblock %} | Viaggiare Nel Pollino</title>
-  <link rel="stylesheet" type="text/css" href="reset-fonts-grids.css">
-  <link rel="stylesheet" type="text/css" href="base.css">
-  <link rel="stylesheet" type="text/css" href="custom.css">
+  <link rel="stylesheet" type="text/css" href="/reset-fonts-grids.css">
+  <link rel="stylesheet" type="text/css" href="/base.css">
+  <link rel="stylesheet" type="text/css" href="/custom.css">
 </head>
 <body>
 <div id="doc4" class="yui-t2">
   <div id="hd">
     <!-- MASTHEAD START -->
-    <div id="headerImage"><img src="/docroot/samples/imgs/header.jpg" alt="Pollino - Logo"/><br/></div>
+    <div id="headerImage"><img src="/docroot/samples/imgs/header.jpg" alt="Pollino - Logo" width="974"/><br/></div>
     <!-- MASTHEAD END -->
   </div>
   <div id="bd">
@@ -24,6 +24,7 @@
         <div class="yui-ge">
           <div class="yui-u first">
             <!-- MAIN COLUMN 1 START -->
+            <h1 id="site-title">{% block header %} VIAGGIARE NEL PARCO NAZIONALE DEL POLLINO {% endblock %}</h1>
             {% block body %} Body {% endblock %}
             <!-- MAIN COLUMN 1 END -->
           </div>
@@ -38,9 +39,10 @@
     </div>
     <div class="yui-b">
       <!-- SECONDARY COLUMN START -->
-      {% include "_menu.html" %}
-      <div class="navLine"><br/></div>
-      {% include "_leftad.html" %}
+      <div id="navDiv">
+        {% include "_menu.html" %}
+        {% include "_leftad.html" %}
+      </div>
       <!-- SECONDARY COLUMN END -->
     </div>
   </div>

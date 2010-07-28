@@ -282,7 +282,7 @@ li {
 ul.phones {
   font-style: italic;
   list-style: none;
-  margin: 10px 0;
+  margin: 1em 0;
   width: 100%;
   text-align:center;
 }
@@ -293,7 +293,7 @@ ul.phones li {
 
 p.important {
   font-weight: bold;
-  padding: 4px 0;
+  padding: 0.4em 0;
   text-align:center;
 }
 
