@@ -1,148 +1,21 @@
 {% extends "base.html" %}
-{% block title %}
-{% endblock %}
-{% block nav %}
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../index.html" class="nav">Home</a></span><span class="itNav"><a href="../index.html" class="nav">Home</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../parco_nazionale_del_pollino.html" class="nav">The park</a></span><span class="itNav"><a href="../parco_nazionale_del_pollino.html" class="nav">Parco Nazionale</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../escursioni.html" class="nav">Excursions and Trekking</a></span><span class="itNav"><a href="../escursioni.html" class="nav">Escursioni e Visite</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../guida.html" class="nav">The guide</a></span><span class="itNav"><a href="../guida.html" class="nav">Guida del Pollino</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../agriturismo.html" class="nav">Farm Holidays</a></span><span class="itNav"><a href="../agriturismo.html" class="nav">Agriturismo</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../albergo.html" class="nav">Albergo</a></span><span class="itNav"><a href="../albergo.html" class="nav">Albergo</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../bed_and_breakfast.html" class="navPath">Bed and Breakfast</a></span><span class="itNav"><a href="../bed_and_breakfast.html" class="navPath">Bed and Breakfast</a></span>
-</div>
-<div class="nav"><span class="enNav"><a href="vecchio_camino.html" class="nav">Bed and Breakfast</a></span><span class="itNav"><a href="vecchio_camino.html" class="nav">Vecchio Camino</a></span>
-</div>
-<div class="nav"><span class="enNav"><a href="luisella.html" class="nav">Luisella</a></span><span class="itNav"><a href="luisella.html" class="nav">Luisella</a></span>
-</div>
-<div class="navSelf"><span class="enNav">Pieffe</span><span class="itNav">Pieffe</span>
-</div>
-<div class="nav2"><span class="enNav"><a href="bbpieffe/Frascineto.html" class="nav">Pollino da Frascineto</a></span><span class="itNav"><a href="bbpieffe/Frascineto.html" class="nav">Pollino da Frascineto</a></span>
-</div>
-<div class="nav"><span class="enNav"><a href="soffitta_del_barone.html" class="nav">Soffitta del Barone</a></span><span class="itNav"><a href="soffitta_del_barone.html" class="nav">Soffitta del Barone</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../rafting.html" class="nav">Rafting</a></span><span class="itNav"><a href="../rafting.html" class="nav">Rafting</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../scuola.html" class="nav">Environmental education</a></span><span class="itNav"><a href="../scuola.html" class="nav">Per le Scuole</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../ristorantedapeppe.html" class="nav">da Peppe</a></span><span class="itNav"><a href="../ristorantedapeppe.html" class="nav">Ristorante da Peppe</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../prodotti_tipici.html" class="nav">Typical products</a></span><span class="itNav"><a href="../prodotti_tipici.html" class="nav">Prodotti tipici</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../letture.html" class="nav">Readings</a></span><span class="itNav"><a href="../letture.html" class="nav">Letture</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../zampogna.html" class="nav">Music</a></span><span class="itNav"><a href="../zampogna.html" class="nav">Zampogna</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../asino.html" class="nav">Save the  donkey!</a></span><span class="itNav"><a href="../asino.html" class="nav">Asino chi legge!</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../come-arrivare.html" class="nav">How to reach</a></span><span class="itNav"><a href="../come-arrivare.html" class="nav">Come arrivare</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../foto.html" class="nav">Foto</a></span><span class="itNav"><a href="../foto.html" class="nav">Foto</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../bibliografia.html" class="nav">Bibliografia</a></span><span class="itNav"><a href="../bibliografia.html" class="nav">Bibliografia</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../ospiti.html" class="nav">Guest book</a></span><span class="itNav"><a href="../ospiti.html" class="nav">Libro degli Ospiti</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../prezzi.html" class="nav">Prezzi</a></span><span class="itNav"><a href="../prezzi.html" class="nav">Prezzi</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../english.html" class="nav">English</a></span><span class="itNav"><a href="../english.html" class="nav">English</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../francaise.html" class="nav">Francaise</a></span><span class="itNav"><a href="../francaise.html" class="nav">Francaise</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../deutsch.html" class="nav">Deutsch</a></span><span class="itNav"><a href="../deutsch.html" class="nav">Deutsch</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../japanese.html" class="nav">Japanese</a></span><span class="itNav"><a href="../japanese.html" class="nav">Japanese</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../basilicata.html" class="nav">Basilicata</a></span><span class="itNav"><a href="../basilicata.html" class="nav">Basilicata</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../parchi.html" class="nav">Parchi</a></span><span class="itNav"><a href="../parchi.html" class="nav">Parchi</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../mondo.html" class="nav">Mondo</a></span><span class="itNav"><a href="../mondo.html" class="nav">Mondo</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../link.html" class="nav">Links</a></span><span class="itNav"><a href="../link.html" class="nav">Link</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../pasqua.html" class="nav">Pasqua</a></span><span class="itNav"><a href="../pasqua.html" class="nav">Pasqua</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../eventi.html" class="nav">Eventi</a></span><span class="itNav"><a href="../eventi.html" class="nav">Eventi</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../lupo.html" class="nav">Lupo</a></span><span class="itNav"><a href="../lupo.html" class="nav">Lupo</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../prenotazioni.html" class="nav">Booking</a></span><span class="itNav"><a href="../prenotazioni.html" class="nav">Informazioni</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../contatti.html" class="nav">Contacts</a></span><span class="itNav"><a href="../contatti.html" class="nav">Contatti</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../artepollino.html" class="nav">Arte Pollino</a></span><span class="itNav"><a href="../artepollino.html" class="nav">Arte Pollino</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../pinoloricato.html" class="nav">Pino Loricato</a></span><span class="itNav"><a href="../pinoloricato.html" class="nav">Pino Loricato</a></span>
-</div>
-{% endblock %}
+{% block title %}Bed and Breakfast Pieffe{% endblock %}
+{% block header %}Bed and Breakfast Pieffe{% endblock %}
+{% block description %}Bed & Breakfast Pieffe a Frascineto nel cuore del Parco Nazionale del Pollino{% endblock %}
+{% block keywords %}Bed & Breakfast, Pollino, Frascineto, Calabria, Albanese, Arb&euml;reshe{% endblock %}
 {% block body %}
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="bbpieffe/mainColumnParagraphs/0/image/3444402082_10a8fbd878_m.jpg" class="contentImage_right" alt=""/>
-	<h2>Dove siamo?</h2>
+  {% load box %}
+	{% local "Dove siamo" "bbpieffe/mainColumnParagraphs/0/image/3444402082_10a8fbd878_m.jpg" right horizontal %}
 A <span>Frascineto (CS), in Calabria.</span><br/>
 <br/>
 Un suggestivo paese <span>Arb&euml;reshe (Italo-Albanese)</span> che sorge in una posizione vantaggiosa per visitare il Parco Nazionale del Pollino, partendo dal versante calabrese jonico.<br/>
 <br/>
-A Frascineto si conservano ancora la lingua, le tradizioni religiose, orali e musicali portate dai coloni provenienti dall'Albania nel XV secolo.<a href="http://www.flickr.com/photos/pollino/2267975347/" title="Valljie Frascineto di Pollino Kombat, su Flickr"><br/>
-</a>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="bbpieffe/mainColumnParagraphs/00/image/fuori_8.jpg" class="contentImage_left" alt=""/>
-	<h2>Mikëpritja</h2>
+A Frascineto si conservano ancora la lingua, le tradizioni religiose, orali e musicali portate dai coloni provenienti dall'Albania nel XV secolo.
+  {% endbox %}
+	{% local "Mikëpritja" "bbpieffe/mainColumnParagraphs/00/image/fuori_8.jpg" left horizontal %}
 Lucia, Salvatore e i loro figli Mimmo e Pierfrancesco saranno lieti di accogliervi nella loro villa come graditi ospiti, nel nome della &ldquo;mik&euml;pritja&rdquo;: la tradizionale accoglienza Arb&euml;reshe.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="bbpieffe/mainColumnParagraphs/05/image/camera_letto_8_2.jpg" class="contentImage_right" alt=""/>
-	<h2>Le Camere</h2>
+  {% endbox %}
+	{% local "Le camere" "bbpieffe/mainColumnParagraphs/05/image/camera_letto_8_2.jpg" right horizontal %}
 Abbiamo a vostra disposizione 4 Camere<br/>
 Dolcedorme<br/>
 Manfriana<br/>
@@ -151,15 +24,8 @@ La Fagosa<br/>
 <br/>
 <br/>
 Per totale di 10 posti, ognuna dotata di bagno e terrazzo<br/>
-<br/>
-<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="bbpieffe/mainColumnParagraphs/06/image/ServiziPieffe-1.jpg" class="contentImage_left" alt=""/>
+  {% endbox %}
+	{% local "Ambiente caldo e familiare" "bbpieffe/mainColumnParagraphs/06/image/ServiziPieffe-1.jpg" left horizontal %}
 Le eleganti camere, arredate con mobili d'epoca e moderni, sono impreziosite dalle antiche coperte arb&euml;reshe. Per immergersi in un ambiente caldo, familiare e di sapore antico.<br/>
 <br/>
 Sui letti ci sono le coperte prodotte al telaio dalle donne di un tempo, nei colori tipici dell'Arberia. <br/>
@@ -168,55 +34,25 @@ Le lenzuola e gli asciugamani di puro cotone o di lino sono decorati con pizzi e
 <br/>
 <br/>
 La Pulizia approfondita e cambio biancheria&nbsp; viene effettuata ogni 3 giorni (salvo particolare richiesta del cliente)
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="bbpieffe/mainColumnParagraphs/01/image/colazione_8.jpg" class="contentImage_right" alt=""/>
-	<h2>Colazione</h2>
+  {% endbox %}
+	{%local "Colazione" "bbpieffe/mainColumnParagraphs/01/image/colazione_8.jpg" right horizontal %}
 I nostri ospiti saranno svegliati dal buon profumo delle nostre marmellate, i dolcetti tipici (crocette, cioccolatini di fichi, il dolce del &rdquo;Pollino&rdquo;, dolci alle mandorle, bocconotti, &ldquo;kruskulit&rdquo;, &ldquo;scalletat&rdquo;), la frutta di stagione e, non meno importante, la nostra disponibilit&agrave; a raccontarci, farci conoscere ed apprezzarci.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="bbpieffe/mainColumnParagraphs/04/image/colazione_interna.jpg" class="contentImage_left" alt=""/>
+  {% endbox %}
+	{% local "I dolcetti" "bbpieffe/mainColumnParagraphs/04/image/colazione_interna.jpg" left horizontal %}
 La colazione viene servita in una accogliente salone oppure nella veranda che si affaccia sul giardino, in cui si possono gustare i dolcetti tipici fatti in casa, frutta di stagione, marmellate e altre specialit&agrave; locali.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="bbpieffe/mainColumnParagraphs/03/image/terrazza_8_2.jpg" class="contentImage_right" alt=""/>
-	<h2>Terrazzi</h2>
+  {% endbox %}
+	{% local "Terrazzi" "bbpieffe/mainColumnParagraphs/03/image/terrazza_8_2.jpg" right horizontal %}
 Le camere sono tutte dotate di televisore, climatizzatore, collegamento internet wi-fi, e permettono, grazie ai terrazzini con sdraio, di ammirare le bellezze paesaggistiche e ambientali.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="bbpieffe/mainColumnParagraphs/08/image/valljie.jpg" class="contentImage_left" alt=""/>
-	<h2>I servizi</h2>
+  {% endbox %}
+	{% local "I servizi" "bbpieffe/mainColumnParagraphs/08/image/valljie.jpg" left horizontal %}
 Angolo lettura: Testi classici e di narrativa Accompagnamento turistico con le Guide Ufficiali del Parco del Pollino<br/>
 Collaborazione con il Centro benessere DiBi<br/>
 Corsi di Cucina<br/>
 Corsi di Italiano L2<br/>
 Informazioni su: percorsi naturalistici, culturali ed eventi vari caratterizzanti il territorio <br/>
 Posto macchina
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="bbpieffe/mainColumnParagraphs/02/image/pranzo.jpg" class="contentImage_left" alt=""/>
-	<h2>La Cena</h2>
-<br/>
+  {% endbox %}
+	{% local "La cena" "bbpieffe/mainColumnParagraphs/02/image/pranzo.jpg" right vertical %}
 Ai nostri ospiti (coppie) che si fermano per un periodo superiore a tre notti offriamo una cena costituito da piatti tipici quali: <br/>
 <span><br/>
 SHTRIDHLA MЁ &Ccedil;ЁRRIN</span><br /><span> <br/>
@@ -224,41 +60,26 @@ RRASHKATJEL ME HEKURTHIN</span><br /><span> <br/>
 RRIS&Ccedil;IOLINRAT</span><br /><span> <br/>
 GAVACRA</span><br /><span> <br/>
 TUMAC ME DRUGEN<br/>
-<br/>
-</span><br/>
-<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="bbpieffe/mainColumnParagraphs/07/image/frasc.jpg" class="contentImage_left" alt=""/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
+  {% endbox %}
+	{% local "Frascineto" "bbpieffe/mainColumnParagraphs/07/image/frasc.jpg" left horizontal %}
+  {% endbox %}
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Galleria fotografica</div>
-<a target="_blank" href="http://flickr.com/gp/pollino/G29oS4%20">Visita fotografica al B&amp;B Pieffe</a>
-<div class="line"><br/></div>
-	</div>
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Informazioni e prenotazioni</div>
-<span class="PiePagina"><b>Tel. 0981 32142 <br/>Cell.&nbsp; 347 9156521 &nbsp;</b>&nbsp; <br/></span>
-<div class="line"><br/></div>
-	</div>
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Tariffe BB&amp;B Pieffe</div>
-Adulti<b> € 25-30</b> al giorno<br/>Bambini <b>3-10</b> anni <b>sconto 30%</b><br/>Bambini fini a 3 anni <b>GRATIS</b><br/><br/>Pagamento anche con carta di credito<br/>VISA<br/>MASTERCARD<br/>AURA<br/>PAYPAL
-<div class="line"><br/></div>
-	</div>
- {% load call %}
- {% call "prenota_visita.html" %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Escursioni e Visite Guidate</div>
-Per chi ama la montagna o vuole visitare il Parco in generale, presso la reception, disporrà di documentazione e materiali informativi.<br/><br/>Chi vuole percorrere l’ampia rete di sentieri del Pollino potrà usufruire dei servizi di una<br/><a href="../guida.html"><b>&nbsp;Guida Ufficiale del Parco </b></a>
-	</div>
+<a href="http://www.flickr.com/photos/pollino/2267975347/" title="Valljie Frascineto di Pollino Kombat, su Flickr"><br/></a>
+
+  {% load call %}
+  {% call "slideshow.html" set_id="72157615688666164" %}
+  {% smallbox Informazioni e prenotazioni %}
+    <ul class="phones">
+      <li>tel. 0981 32142</li>
+      <li>cell.347 9156521</li>
+    </ul>
+  {% endbox%}
+ 
+	{% smallbox "Tariffe BB Pieffe" %}
+Adulti<b> € 25-30</b> al giorno<br/>Bambini <b>3-10</b> anni <b>sconto 30%</b><br/>Bambini fini a 3 anni <b>GRATIS</b><br/><br/>
+Pagamento anche con carta di credito<br/>VISA<br/>MASTERCARD<br/>AURA<br/>PAYPAL
+	{% endbox %}
+  {% call "prenota_visita.html" %}
+  {% call "escursioni.html" %}
 {% endblock %}
