@@ -10,6 +10,16 @@
   <link rel="stylesheet" type="text/css" href="/reset-fonts-grids.css">
   <link rel="stylesheet" type="text/css" href="/base.css">
   <link rel="stylesheet" type="text/css" href="/custom.css">
+{% if validate %}
+  <script type="text/javascript">
+    window.onload = function() {
+      var anchors = document.getElementsByTagName('a');
+      for(var i=0; i<anchors.length; i++) {
+        anchors[i].href = anchors[i].href + "?validate=true";
+      }
+    }
+  </script>
+{% endif %}
 </head>
 <body>
 <div id="doc4" class="yui-t2">
@@ -53,4 +63,8 @@
   </div>
 </div>
 </body>
+{% if not validate %}
+{% include "_analytics.html" %}
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=robcos"></script> 
+{% endif %}
 </html>

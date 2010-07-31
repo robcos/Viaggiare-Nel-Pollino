@@ -40,7 +40,7 @@ import re
 import datetime
 
 def legacy(request):
-  path = os.path.join(request.get_full_path()[1:])
+  path = os.path.join(request.path[1:])
    
   # all files beginning with _ are to be considered private
   if re.match("_.*", path):
@@ -51,7 +51,8 @@ def legacy(request):
   if path == "":
     path = "index.html"
   try:
-    response = shortcuts.render_to_response(path, {'path': '/' + path})
+    response = shortcuts.render_to_response(path, {'path': '/' + path, 
+        'validate': request.GET.get('validate', False) })
   except TemplateDoesNotExist:
     return HttpResponseNotFound("404 - Not found")
 
