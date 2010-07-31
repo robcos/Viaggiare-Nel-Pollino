@@ -1,224 +1,56 @@
 {% extends "base.html" %}
-{% block title %}
-{% endblock %}
-{% block nav %}
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../index.html" class="nav">Home</a></span><span class="itNav"><a href="../index.html" class="nav">Home</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../parco_nazionale_del_pollino.html" class="nav">The park</a></span><span class="itNav"><a href="../parco_nazionale_del_pollino.html" class="nav">Parco Nazionale</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../escursioni.html" class="nav">Excursions and Trekking</a></span><span class="itNav"><a href="../escursioni.html" class="nav">Escursioni e Visite</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../guida.html" class="nav">The guide</a></span><span class="itNav"><a href="../guida.html" class="nav">Guida del Pollino</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../agriturismo.html" class="nav">Farm Holidays</a></span><span class="itNav"><a href="../agriturismo.html" class="nav">Agriturismo</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../albergo.html" class="nav">Albergo</a></span><span class="itNav"><a href="../albergo.html" class="nav">Albergo</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../bed_and_breakfast.html" class="navPath">Bed and Breakfast</a></span><span class="itNav"><a href="../bed_and_breakfast.html" class="navPath">Bed and Breakfast</a></span>
-</div>
-<div class="nav"><span class="enNav"><a href="vecchio_camino.html" class="nav">Bed and Breakfast</a></span><span class="itNav"><a href="vecchio_camino.html" class="nav">Vecchio Camino</a></span>
-</div>
-<div class="nav"><span class="enNav"><a href="luisella.html" class="nav">Luisella</a></span><span class="itNav"><a href="luisella.html" class="nav">Luisella</a></span>
-</div>
-<div class="nav"><span class="enNav"><a href="bbpieffe.html" class="nav">Pieffe</a></span><span class="itNav"><a href="bbpieffe.html" class="nav">Pieffe</a></span>
-</div>
-<div class="navSelf"><span class="enNav">Soffitta del Barone</span><span class="itNav">Soffitta del Barone</span>
-</div>
-<div class="nav2"><span class="enNav"><a href="soffitta_del_barone/Rotonda.html" class="nav">Il Pollino da Mormanno</a></span><span class="itNav"><a href="soffitta_del_barone/Rotonda.html" class="nav">Il Pollino da Mormanno</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../rafting.html" class="nav">Rafting</a></span><span class="itNav"><a href="../rafting.html" class="nav">Rafting</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../scuola.html" class="nav">Environmental education</a></span><span class="itNav"><a href="../scuola.html" class="nav">Per le Scuole</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../ristorantedapeppe.html" class="nav">da Peppe</a></span><span class="itNav"><a href="../ristorantedapeppe.html" class="nav">Ristorante da Peppe</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../prodotti_tipici.html" class="nav">Typical products</a></span><span class="itNav"><a href="../prodotti_tipici.html" class="nav">Prodotti tipici</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../letture.html" class="nav">Readings</a></span><span class="itNav"><a href="../letture.html" class="nav">Letture</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../zampogna.html" class="nav">Music</a></span><span class="itNav"><a href="../zampogna.html" class="nav">Zampogna</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../asino.html" class="nav">Save the  donkey!</a></span><span class="itNav"><a href="../asino.html" class="nav">Asino chi legge!</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../come-arrivare.html" class="nav">How to reach</a></span><span class="itNav"><a href="../come-arrivare.html" class="nav">Come arrivare</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../foto.html" class="nav">Foto</a></span><span class="itNav"><a href="../foto.html" class="nav">Foto</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../bibliografia.html" class="nav">Bibliografia</a></span><span class="itNav"><a href="../bibliografia.html" class="nav">Bibliografia</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../ospiti.html" class="nav">Guest book</a></span><span class="itNav"><a href="../ospiti.html" class="nav">Libro degli Ospiti</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../prezzi.html" class="nav">Prezzi</a></span><span class="itNav"><a href="../prezzi.html" class="nav">Prezzi</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../english.html" class="nav">English</a></span><span class="itNav"><a href="../english.html" class="nav">English</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../francaise.html" class="nav">Francaise</a></span><span class="itNav"><a href="../francaise.html" class="nav">Francaise</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../deutsch.html" class="nav">Deutsch</a></span><span class="itNav"><a href="../deutsch.html" class="nav">Deutsch</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../japanese.html" class="nav">Japanese</a></span><span class="itNav"><a href="../japanese.html" class="nav">Japanese</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../basilicata.html" class="nav">Basilicata</a></span><span class="itNav"><a href="../basilicata.html" class="nav">Basilicata</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../parchi.html" class="nav">Parchi</a></span><span class="itNav"><a href="../parchi.html" class="nav">Parchi</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../mondo.html" class="nav">Mondo</a></span><span class="itNav"><a href="../mondo.html" class="nav">Mondo</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../link.html" class="nav">Links</a></span><span class="itNav"><a href="../link.html" class="nav">Link</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../pasqua.html" class="nav">Pasqua</a></span><span class="itNav"><a href="../pasqua.html" class="nav">Pasqua</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../eventi.html" class="nav">Eventi</a></span><span class="itNav"><a href="../eventi.html" class="nav">Eventi</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../lupo.html" class="nav">Lupo</a></span><span class="itNav"><a href="../lupo.html" class="nav">Lupo</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../prenotazioni.html" class="nav">Booking</a></span><span class="itNav"><a href="../prenotazioni.html" class="nav">Informazioni</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../contatti.html" class="nav">Contacts</a></span><span class="itNav"><a href="../contatti.html" class="nav">Contatti</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../artepollino.html" class="nav">Arte Pollino</a></span><span class="itNav"><a href="../artepollino.html" class="nav">Arte Pollino</a></span>
-</div>
-<div class="navLine"><br/></div>
-<div class="navTopLevel"><span class="enNav"><a href="../pinoloricato.html" class="nav">Pino Loricato</a></span><span class="itNav"><a href="../pinoloricato.html" class="nav">Pino Loricato</a></span>
-</div>
-{% endblock %}
+{% block title %}Bed and Breakfast La Soffitta del Barone - Mormanno{% endblock %}
+{% block header %}Bed and Breakfast La Soffitta del Barone{% endblock %}
+{% block description %}Bed &amp; Breakfast La Soffitta del Barone a Mormanno nel cuore del Parco Nazionale del Pollino{% endblock %}
+{% block keywords %}Bed &amp; Breakfast, Pollino, Mormanno, Calabria, Montagnia, Panorama{% endblock %}
+
 {% block body %}
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<h2>AVVISO<br/>LA STRUTTURA E APERTA MA LA PAGINA E' IN VIA DI MIGLIORAMENTO, POTREBBE ESSERCI QUALCHE ERRORE NELLA DESCRIZIONE.</h2>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-	<img src="soffitta_del_barone/mainColumnParagraphs/09/image/mormanno.jpg" class="contentImage_right" alt=""/>
-	<h2>Dove Siamo</h2>
+  {% load box %}
+  {% local "Dove Siamo" "soffitta_del_barone/mainColumnParagraphs/09/image/mormanno.jpg" right vertical %}
 Siamo a Mormanno, i provincia di Cosenza, a 850 m. s.l.m., nel Parco Nazionale del Pollino.
 <br/>
 Gode di un clima fresco ed asciutto, in posizione centrale per raggiungere le principali mete del Parco e facilmente raggiungibile con l'Autostrada A3.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="soffitta_del_barone/mainColumnParagraphs/0/image/balconata.jpg" class="contentImage_left" alt=""/>
+	{% endbox %}
+  {% local "Palazzo del Settecento" "soffitta_del_barone/mainColumnParagraphs/0/image/balconata.jpg" left horizontal %}
 In una mansarda di un palazzo del Settecento di recente restaurato, &egrave; ubicata &quot;La Soffitta del Barone&quot;.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="soffitta_del_barone/mainColumnParagraphs/00/image/interno_1.jpg" class="contentImage_right" alt=""/>
+	{% endbox %}
+  {% local "I padroni di casa" "soffitta_del_barone/mainColumnParagraphs/00/image/interno_1.jpg" right horizontal %}
 Lieti di ospitarvi Antonella ed Augusto, giovani padroni di casa, vogliono offrire un soggiorno rilassante e la possibilit&agrave; di gustare a colazione, le bont&agrave; della gastronomia e della pasticceria locale.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="soffitta_del_barone/mainColumnParagraphs/01/image/interno_2.jpg" class="contentImage_left" alt=""/>
+	{% endbox %}
+  {% local "Comodo e accogliente" "soffitta_del_barone/mainColumnParagraphs/01/image/interno_2.jpg" left horizontal %}
 Il nostro ospite, amante della montagna, potr&agrave; soggiornare in comode camere dotate di bagno e tv nell'accogliente sala da pranzo, mentre in estate potr&agrave; rilassarsi nella terrazza panoramica dove si pu&ograve; consumare la prima colazione con prodotti tipici locali e della casa. I ricercatori potranno consultare manoscritti, testi antichi e moderni nella biblioteca di famiglia.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="soffitta_del_barone/mainColumnParagraphs/06/image/letto_2.jpg" class="contentImage_right" alt=""/>
+	{% endbox %}
+  {% local "4 stanze" "soffitta_del_barone/mainColumnParagraphs/06/image/letto_2.jpg" right horizontal %}
 La nostra struttura ha a disposizione 4 stanze per un totale di 12 posti letto.<br/>
-<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="soffitta_del_barone/mainColumnParagraphs/05/image/letto_1.jpg" class="contentImage_left" alt=""/>
+	{% endbox %}
+  {% local "Camere luminose" "soffitta_del_barone/mainColumnParagraphs/05/image/letto_1.jpg" left horizontal %}
 Le camere sono luminose, confortevoli e arredate con gusto <br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="soffitta_del_barone/mainColumnParagraphs/04/image/interno_4.jpg" class="contentImage_right" alt=""/>
+	{% endbox %}
+  {% local "Dolci tipici" "soffitta_del_barone/mainColumnParagraphs/04/image/interno_4.jpg" right horizontal %}
 La colazione vi sar&agrave; servita in un ambiente confortevole, gustando le marmellate e i dolci tipici della nostra terra<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="soffitta_del_barone/mainColumnParagraphs/02/image/terrazza.jpg" class="contentImage_left" alt=""/>
+	{% endbox %}
+  {% local "Relax" "soffitta_del_barone/mainColumnParagraphs/02/image/terrazza.jpg" left horizontal %}
 Il balcone per i vostri momenti di relax<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="soffitta_del_barone/mainColumnParagraphs/03/image/terrazza_mormanno.jpg" class="contentImage_right" alt=""/>
+	{% endbox %}
+  {% local "Vista panoramica" "soffitta_del_barone/mainColumnParagraphs/03/image/terrazza_mormanno.jpg" right horizontal %}
 Il Centro storico di Mormanno visto dalla nostra terrazza panoramica.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
+	{% endbox %}
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Galleria Fotografica</div>
-<a target="_blank" href="http://www.flickr.com/photos/pollino/sets/72157620709242278">FOTO</a>
-<div class="line"><br/></div>
-	</div>
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Informazioni e Prenotazioni</div>
-<b>+39(0)98122916 <br/>+393477176208 <br/>  +393281393771 <br/>  +393893467176</b>
-<div class="line"><br/></div>
-	</div>
-	<div style="clear:both;">
-		<div class="rightColumnTitle">TARIFFE DELLA SOFFITTA DEL BARONE</div>
+  {% load call %}
+  {% call "slideshow.html" set_id="72157620709242278" %}
+  {% smallbox Informazioni e prenotazioni %}
+    <ul class="phones">
+      <li>0981.22916</li>
+      <li>347.7176208</li>
+      <li>328.1393771</li>
+      <li>389.3467176</li>
+    </ul>
+  {% endbox %}
+  {% smallbox "Tariffe"%}
 Camera matrimoniale <b>€ 60</b><br/>Camera singola <b>€ 40</b><br/>Camera 80 per la tripla <b>€ 80</b><br/>Camera Quadrupla<b> € 100</b><br/>Tutti i prezzi sono comprensivi di Prima Colazione
-<div class="line"><br/></div>
+  {% endbox %}
  {% load call %}
  {% call "prenota_visita.html" %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Escursioni e visite guidate</div>
-Per chi ama la montagna o vuole visitare il Parco in generale, pressolareception, disporrà di documentazione e materiali informativi.<br/><br/>Chi vuole percorrere l’ampia rete di sentieri del Pollino potrà usufruire dei servizi di una<a target="_blank" href="../guida.html"> </a><a href="../guida.html">Guida Ufficiale del Parco </a>
-	</div>
-</div>
+ {% call "escursioni.html" %}
 {% endblock %}
