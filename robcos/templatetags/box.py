@@ -4,6 +4,7 @@ import os
 import re
 import tokenize
 import StringIO
+from models import Page
 from datetime import date
 
 register = template.Library()
@@ -200,6 +201,21 @@ class OnlyOnMonthNode(template.Node):
       return self.nodelist.render(context)
     return ""
 
+def do_title(parser, token):
+  nodelist = parser.parse(('endtitle',))
+  parser.delete_first_token()
+  return TitleNode(nodelist)
+
+class TitleNode(template.Node):
+  def __init__(self, nodelist):
+    self.nodelist = nodelist
+
+  def render(self, context):
+    defaultTitle = self.nodelist.render(context)
+    page = Page.by_path(context['path'], defaultTitle)
+    title = page.title.encode()
+    return title
+
 register.tag('smallbox', do_smallbox)
 register.tag('contentbox', do_contentbox)
 register.tag('flickr', do_flickr)
@@ -207,3 +223,4 @@ register.tag('local', do_local)
 register.tag('local_linked', do_local_linked)
 register.tag('snippet', do_call)
 register.tag('only_on_month', do_only_on_month)
+register.tag('title', do_title)

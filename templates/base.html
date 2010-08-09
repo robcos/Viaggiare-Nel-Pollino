@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
+<head>{% load box %}
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Language" content="it"/>
   <meta name="description" content="{% block description %}Informazioni sul Parco Nazionale del Pollino{% endblock %}"/>
@@ -34,7 +34,7 @@
         <div class="yui-ge">
           <div class="yui-u first">
             <!-- MAIN COLUMN 1 START -->
-            <h1 id="site-title">{% block header %} VIAGGIARE NEL PARCO NAZIONALE DEL POLLINO {% endblock %}</h1>
+            <h1 id="site-title">{% title %}{% block header %}Viaggiare nel pollino - Pagina in allestimento{% endblock %}{% endtitle %}</h1>
             {% block body %} Body {% endblock %}
             <!-- MAIN COLUMN 1 END -->
           </div>
