@@ -1,0 +1,19 @@
+<form method="post">
+<table>
+   <tr>
+     <th>Path</th>
+     <th>Title</th>
+     <th>Keywords</th>
+     <th>Description</th>
+   </tr>
+{% for page in pages %}
+   <tr>
+     <td>{{ page.path }}</td>
+     <td><input value="{{page.title}}" name="title[{{page.key}}]" size="80"></td>
+     <td><input value="{{page.keywords}}" name="keywords[{{page.key}}]" size="80"></td>
+     <td><input value="{{page.description}}" name="description[{{page.key}}]" size="80"></td>
+   </tr>
+{% endfor %}
+</table>
+<input type="submit" value="Salva">
+</form>

@@ -11,4 +11,5 @@ class Page(db.Model):
     pages = Page.all().filter('path = ', path).fetch(1)
     page = pages[0]
     return pages[0]
+
   by_path = staticmethod(by_path)
