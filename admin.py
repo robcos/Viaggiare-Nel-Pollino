@@ -22,9 +22,6 @@ from django.template import TemplateDoesNotExist
 
 import os
 
-from appengine_django import InstallAppengineHelperForDjango
-InstallAppengineHelperForDjango('1.1')
-
 from google.appengine.api import users
 
 from google.appengine.ext import db

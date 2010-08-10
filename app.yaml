@@ -13,7 +13,7 @@ handlers:
   upload: static/(.*\.(gif|png|jpg))
 
 - url: /admin/.*
-  script: django_bootstrap.py
+  script: main.py
   login: admin
 
 - url: /.*
