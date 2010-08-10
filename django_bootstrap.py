@@ -48,7 +48,8 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 # that this patches up sys.modules, so all other code can just use
 # "from django import forms" etc.
 try:
-  from django import v0_96 as django
+  from django import v1 as django
+  #from django import v0_96 as django
 except ImportError:
   pass
 

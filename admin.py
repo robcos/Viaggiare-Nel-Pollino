@@ -49,6 +49,8 @@ def pages(request):
       description = 'description[' + str(page.key()) + ']'
       keywords = 'keywords[' + str(page.key()) + ']'
       page.title = request.POST.get(title)
+      page.keywords = request.POST.get(keywords)
+      page.description = request.POST.get(description)
       page.put()
     return HttpResponseRedirect('/admin/pages.html')
   else:

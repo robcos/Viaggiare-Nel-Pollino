@@ -204,17 +204,30 @@ class OnlyOnMonthNode(template.Node):
 def do_title(parser, token):
   nodelist = parser.parse(('endtitle',))
   parser.delete_first_token()
-  return TitleNode(nodelist)
+  return TitleNode(nodelist, 'title')
+
+def do_keywords(parser, token):
+  nodelist = parser.parse(('endkeywords',))
+  parser.delete_first_token()
+  return TitleNode(nodelist, 'keywords')
+
+def do_description(parser, token):
+  nodelist = parser.parse(('enddescription',))
+  parser.delete_first_token()
+  return TitleNode(nodelist, 'description')
 
 class TitleNode(template.Node):
-  def __init__(self, nodelist):
+  def __init__(self, nodelist, attribute):
     self.nodelist = nodelist
+    self.attribute = '_' + attribute
 
   def render(self, context):
     defaultTitle = self.nodelist.render(context)
-    page = Page.by_path(context['path'], defaultTitle)
-    title = page.title.encode()
-    return title
+    page = context['page']
+    if page.__dict__[self.attribute] == None:
+      page.__dict__[self.attribute] = defaultTitle
+      page.put()
+    return page.__dict__[self.attribute].encode()
 
 register.tag('smallbox', do_smallbox)
 register.tag('contentbox', do_contentbox)
@@ -224,3 +237,5 @@ register.tag('local_linked', do_local_linked)
 register.tag('snippet', do_call)
 register.tag('only_on_month', do_only_on_month)
 register.tag('title', do_title)
+register.tag('keywords', do_keywords)
+register.tag('description', do_description)

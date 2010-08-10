@@ -3,8 +3,8 @@
 <head>{% load box %}
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Language" content="it"/>
-  <meta name="description" content="{% block description %}Informazioni sul Parco Nazionale del Pollino{% endblock %}"/>
-  <meta name="keywords" content="{% block keywords %}Pollino, Agriturismo, Guida, Parco Nazionale, Escursioni, Trekking, Visite Guidate, Rafting, Basilicata, Rotonda, Potenza, Lucania, Calabria, Pino Loricato{% endblock %}"/>
+  <meta name="description" content="{% description %}{% block description %}Informazioni sul Parco Nazionale del Pollino{% endblock %}{% enddescription %}"/>
+  <meta name="keywords" content="{% keywords %}{% block keywords %}Pollino, Agriturismo, Guida, Parco Nazionale, Escursioni, Trekking, Visite Guidate, Rafting, Basilicata, Rotonda, Potenza, Lucania, Calabria, Pino Loricato{% endblock %}{% endkeywords%}"/>
   <meta name="google-site-verification" content="2in8mPKASoP8hrAQzXu_8l07UoWD0gkwEoj65VoTQCE" />
   <title>{% block title %} {% endblock %} | Viaggiare Nel Pollino</title>
   <link rel="stylesheet" type="text/css" href="/reset-fonts-grids.css">

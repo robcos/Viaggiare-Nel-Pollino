@@ -90,3 +90,5 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'robcos',
 )
+
+DEFAULT_CHARSET = 'utf-8'

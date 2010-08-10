@@ -33,6 +33,8 @@ from django import shortcuts
 from django.http import HttpResponseRedirect
 from django.http import HttpResponseNotFound
 
+from models import Page
+
 # Python
 import logging
 import os
@@ -50,8 +52,14 @@ def legacy(request):
     return HttpResponseRedirect("/")
   if path == "":
     path = "index.html"
+        
+  page = None
+  if re.match(".*\.html$", path):
+      page = Page.by_path('/' + path)
+
   try:
     response = shortcuts.render_to_response(path, {'path': '/' + path, 
+        'page': page,
         'validate': request.GET.get('validate', False) })
   except TemplateDoesNotExist:
     return HttpResponseNotFound("404 - Not found")
