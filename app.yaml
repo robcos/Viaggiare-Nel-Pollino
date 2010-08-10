@@ -8,9 +8,13 @@ handlers:
 #- url: /remote_api
 #  script: $PYTHON_LIB/google/appengine/ext/remote_api/handler.py
 
+- url: /(.*\.(gif|png|jpg))
+  static_files: templates/\1
+  upload: static/(.*\.(gif|png|jpg))
+
 - url: /admin/.*
   script: django_bootstrap.py
   login: admin
 
-- url: .*
-  script: django_bootstrap.py
+- url: /.*
+  script: main.py

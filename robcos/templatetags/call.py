@@ -78,6 +78,7 @@ def do_call(parser, token):
                  raise template.TemplateSyntaxError, "Argument syntax wrong: should be key=value"
          else:
              args.append(parser.compile_filter(i))
+   kwargs = dict([(str(x),kwargs[x]) for x in kwargs.keys()]) 
    return CallNode(path, *args, **kwargs)
 
 register.tag('call', do_call)

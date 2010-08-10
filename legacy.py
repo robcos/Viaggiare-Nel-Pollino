@@ -33,7 +33,7 @@ from django import shortcuts
 from django.http import HttpResponseRedirect
 from django.http import HttpResponseNotFound
 
-from models import Page
+from robcos.models import Page
 
 # Python
 import logging

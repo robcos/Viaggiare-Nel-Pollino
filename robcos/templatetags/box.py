@@ -4,7 +4,7 @@ import os
 import re
 import tokenize
 import StringIO
-from models import Page
+from robcos.models import Page
 from datetime import date
 
 register = template.Library()
@@ -222,12 +222,12 @@ class TitleNode(template.Node):
     self.attribute = '_' + attribute
 
   def render(self, context):
-    defaultTitle = self.nodelist.render(context)
+    value = self.nodelist.render(context)
     page = context['page']
     if page.__dict__[self.attribute] == None:
-      page.__dict__[self.attribute] = defaultTitle
+      page.__dict__[self.attribute] = str(value)
       page.put()
-    return page.__dict__[self.attribute].encode()
+    return page.__dict__[self.attribute]
 
 register.tag('smallbox', do_smallbox)
 register.tag('contentbox', do_contentbox)
