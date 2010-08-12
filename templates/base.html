@@ -6,7 +6,7 @@
   <meta name="description" content="{% description %}{% block description %}Informazioni sul Parco Nazionale del Pollino{% endblock %}{% enddescription %}"/>
   <meta name="keywords" content="{% keywords %}{% block keywords %}Pollino, Agriturismo, Guida, Parco Nazionale, Escursioni, Trekking, Visite Guidate, Rafting, Basilicata, Rotonda, Potenza, Lucania, Calabria, Pino Loricato{% endblock %}{% endkeywords%}"/>
   <meta name="google-site-verification" content="2in8mPKASoP8hrAQzXu_8l07UoWD0gkwEoj65VoTQCE" />
-  <title>{% block title %} {% endblock %} | Viaggiare Nel Pollino</title>
+  <title>{% title %}{% block title %} {% endblock %}{% endtitle %} | Viaggiare Nel Pollino</title>
   <link rel="stylesheet" type="text/css" href="/style.css">
 {% if validate %}
   <script type="text/javascript">
@@ -32,7 +32,7 @@
         <div class="yui-ge">
           <div class="yui-u first">
             <!-- MAIN COLUMN 1 START -->
-            <h1 id="site-title">{% title %}{% block header %}Viaggiare nel pollino{% endblock %}{% endtitle %}</h1>
+            <h1 id="site-title">{% header %}{% block header %}Viaggiare nel pollino{% endblock %}{% endheader %}</h1>
             {% block body %} Body {% endblock %}
             <!-- MAIN COLUMN 1 END -->
           </div>

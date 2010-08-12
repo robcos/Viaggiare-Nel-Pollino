@@ -2,10 +2,11 @@ from appengine_django import models
 from google.appengine.ext import db
 
 class Page(models.BaseModel):
-  path = db.StringProperty(required=True)
-  title = db.StringProperty(required=False)
-  description = db.StringProperty(required=False)
-  keywords = db.StringProperty(required=False)
+  path = db.TextProperty(required=True)
+  title = db.TextProperty(required=False)
+  header = db.TextProperty(required=False)
+  description = db.TextProperty(required=False)
+  keywords = db.TextProperty(required=False)
   
   def by_path(path):
     pages = Page.all().filter('path = ', path).fetch(1)
