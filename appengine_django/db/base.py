@@ -42,8 +42,9 @@ def get_datastore_paths():
   from google.appengine.tools import dev_appserver_main
   datastore_path = dev_appserver_main.DEFAULT_ARGS['datastore_path']
   history_path = dev_appserver_main.DEFAULT_ARGS['history_path']
-  datastore_path = datastore_path.replace("dev_appserver", "django_%s" % appid)
-  history_path = history_path.replace("dev_appserver", "django_%s" % appid)
+  # robcos: Don't do this as I wan the app server to share the same datastore
+  #datastore_path = datastore_path.replace("dev_appserver", "django_%s" % appid)
+  #history_path = history_path.replace("dev_appserver", "django_%s" % appid)
   return datastore_path, history_path
 
 
