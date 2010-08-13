@@ -133,9 +133,6 @@ def do_call(parser, token):
                args.append(parser.compile_filter(i))
    return SnippetNode(path, *args, **kwargs)
 
-
-
-
 def do_contentbox(parser, token):
     nodelist = parser.parse(('endbox',))
     tag_name, header = token.split_contents()
@@ -207,9 +204,15 @@ class ContentNode(template.Node):
         node.title = unicode(self.header)
         node.put()
     else:
-        node = Node(title=self.header, content = content, path='aa')
+        node = Node(title=self.header, content = content, path='')
+    context.update({
+      "header": self.header, #deprecated
+      "content": content, #deprecated
+      "node": node
+    })
+ 
     return app_template.render(os.path.join(os.path.dirname(__file__), 
-      self.template), { "header": node.title, "content": node.content})
+      self.template), context)
 
 
 class SmallBoxNode(template.Node):
@@ -220,8 +223,12 @@ class SmallBoxNode(template.Node):
 
   def render(self, context):
     content = self.nodelist.render(context)
+    context.update({
+      "header": self.header,
+      "content": content
+    })
     return app_template.render(os.path.join(os.path.dirname(__file__), 
-      self.template), { "header": self.header, "content": content})
+      self.template), context)
 
 class OnlyOnMonthNode(template.Node):
   def __init__(self, nodelist, months):

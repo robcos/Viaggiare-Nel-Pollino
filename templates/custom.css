@@ -222,3 +222,7 @@ li {
   color:white;
   font-size:0.8459em;
 }
+
+a.admin {
+  color:red;
+}

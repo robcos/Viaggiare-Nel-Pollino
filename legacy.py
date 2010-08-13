@@ -57,9 +57,11 @@ def legacy(request):
   if re.match(".*\.html$", path):
       page = Page.by_path('/' + path)
 
+  is_admin = users.is_current_user_admin()
   try:
     response = shortcuts.render_to_response(path, {'path': '/' + path, 
         'page': page,
+        'is_admin': is_admin,
         'validate': request.GET.get('validate', False) })
   except TemplateDoesNotExist:
     return HttpResponseNotFound("404 - Not found")
