@@ -5,6 +5,7 @@ import re
 import tokenize
 import StringIO
 from robcos.models import Page
+from robcos.models import Node
 from datetime import date
 
 register = template.Library()
@@ -75,10 +76,10 @@ def do_only_on_month(parser, token):
 
 def do_smallbox(parser, token):
     nodelist = parser.parse(('endbox',))
-    tag_name, header = map(strip, token.contents.split(None,1))
+    tag_name, path, header = map(strip, token.split_contents())
 
     parser.delete_first_token()
-    return SmallBoxNode(nodelist, header, "smallbox.html")
+    return SmallBoxNode(nodelist, path, header, "smallbox.html")
 
 def do_snippet(parser, token):
     bits = token.split_contents()
@@ -132,7 +133,7 @@ def do_contentbox(parser, token):
     tag_name, header = token.split_contents()
     header = strip(header)
     parser.delete_first_token()
-    return SmallBoxNode(nodelist, header, "contentbox.html")
+    return SmallBoxNode(nodelist, None, header, "contentbox.html")
 
 def strip(header):
   if header[0] == header[-1] == '"':
@@ -181,15 +182,26 @@ class SnippetNode(template.Node):
       self.snippet), context)
 
 class SmallBoxNode(template.Node):
-  def __init__(self, nodelist, header, template):
+  def __init__(self, nodelist, path, header, template):
     self.nodelist = nodelist
     self.header = header
     self.template = template
+    self.path = path
 
   def render(self, context):
-    output = self.nodelist.render(context)
+    content = self.nodelist.render(context)
+    node = None
+    if self.path != None:
+      node = Node.by_path(self.path)
+      if node != None and node.content == None:
+        node.path = str(self.path)
+        node.content = unicode(content)
+        node.title = unicode(self.header)
+        node.put()
+    else:
+        node = Node(title=self.header, content = content, path='aa')
     return app_template.render(os.path.join(os.path.dirname(__file__), 
-      self.template), { "header": self.header, "content": output})
+      self.template), { "header": node.title, "content": node.content})
 
 class OnlyOnMonthNode(template.Node):
   def __init__(self, nodelist, months):

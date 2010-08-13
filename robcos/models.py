@@ -17,3 +17,18 @@ class Page(models.BaseModel):
     return pages[0]
 
   by_path = staticmethod(by_path)
+
+class Node(models.BaseModel):
+  path = db.StringProperty(required=True)
+  title = db.TextProperty(required=False)
+  content = db.TextProperty(required=False)
+
+  def by_path(path):
+    nodes = Node.all().filter('path = ', path).fetch(1)
+    if len(nodes) < 1:
+        node = Node(path = path)
+        node.put()
+        return node
+    return nodes[0]
+
+  by_path = staticmethod(by_path)

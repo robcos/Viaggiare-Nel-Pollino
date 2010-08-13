@@ -62,17 +62,22 @@ Centro storico arroccato sul fiume Battendiero offre interesanti scorci.
 {% endblock %}
 
 {% block right %}
-		{% smallbox Viaggiare nel Pollino %}
+  {% smallbox "/small/text" "Viaggiare nel Pollino" %}
   Testi e foto curati da <br/>Giuseppe Cosenza<b><br/><a href="guida.html">Guida del Parco del Pollino</a></b>
-{% endbox %}
-  {% smallbox Novit&agrave;! %}
+  {% endbox %}
+  {% smallbox '/small/news' 'Novit&agrave;!' %}
   Visita la nuova pagina del <p class="important"><a href="/agriturismo/la_terrazza.html" class="important">Piccolo Agriturismo La Terrazza</a></p>
   {% endbox %}
-		{% smallbox Scegli la lingua %}
-<a href="english.html"><b>Do&nbsp;you speak English?</b></a><br/><a href="deutsch.html"><b>Sprechen Sie Deutsch?</b></a><br/><a href="francaise.html"><b>Esc tu parlè Francaise?</b></a><br/><a href="japanese.html"><b>Nippon?</b></a><br/><a href="http://www.basilicata.se"><b>Basilicata på Svenska</b></a>
+		{% smallbox "/small/language/" "Scegli la lingua" %}
+<ul>
+<li><a href="english.html">Do you speak English?</a></li>
+<li><a href="deutsch.html">Sprechen Sie Deutsch?</a></li>
+<li><a href="francaise.html">Parlez-vous français?</a></li>
+<li><a href="japanese.html">Nippon?</a></li>
+</ul>
 {% endbox %}
-		{% smallbox Informazioni Telefoniche %}
-<b>VIAGGIARE NEL POLLINO è un servizio di informazione on-line.</b><br/>Le informazioni contenute nel sito sono estremamente curate e precise.<br/>Andate alle pagine relative ai vostri interessi:<br/><b><a href="agriturismo.html">Agriturismo</a><br/></b><b><a href="bed_and_breakfast.html">Bed &amp; Breakfast</a></b><br/><b><a href="escursioni.html">Escursioni</a></b><br/><b><a href="ristorantedapeppe.html">Gastronomia</a></b><br/><b><a href="escursioni.html">Visite Guidate</a></b><br/>Nelle pagine interne informazioni su tutti i servizi e relativi recapiti telefonici.
+		{% smallbox '/small/info' 'Informazioni Telefoniche' %}
+<b>VIAGGIARE NEL POLLINO &egrave; un servizio di informazione on-line.</b><br/>Le informazioni contenute nel sito sono estremamente curate e precise.<br/>Andate alle pagine relative ai vostri interessi:<br/><b><a href="agriturismo.html">Agriturismo</a><br/></b><b><a href="bed_and_breakfast.html">Bed &amp; Breakfast</a></b><br/><b><a href="escursioni.html">Escursioni</a></b><br/><b><a href="ristorantedapeppe.html">Gastronomia</a></b><br/><b><a href="escursioni.html">Visite Guidate</a></b><br/>Nelle pagine interne informazioni su tutti i servizi e relativi recapiti telefonici.
 {% endbox %}
     {% call "slideshow.html" set_id="72157604166088729" %}
 {% endblock %}
