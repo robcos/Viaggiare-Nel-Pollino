@@ -76,10 +76,18 @@ def do_only_on_month(parser, token):
 
 def do_smallbox(parser, token):
     nodelist = parser.parse(('endbox',))
+    tag_name, header = map(strip, token.contents.split(None,1))
+
+    parser.delete_first_token()
+    return SmallBoxNode(nodelist, header, "smallbox.html")
+
+def do_node(parser, token):
+    nodelist = parser.parse(('endbox',))
     tag_name, path, header = map(strip, token.split_contents())
 
     parser.delete_first_token()
-    return SmallBoxNode(nodelist, path, header, "smallbox.html")
+    return ContentNode(nodelist, path, header, "smallbox.html")
+
 
 def do_snippet(parser, token):
     bits = token.split_contents()
@@ -133,7 +141,7 @@ def do_contentbox(parser, token):
     tag_name, header = token.split_contents()
     header = strip(header)
     parser.delete_first_token()
-    return SmallBoxNode(nodelist, None, header, "contentbox.html")
+    return SmallBoxNode(nodelist, header, "contentbox.html")
 
 def strip(header):
   if header[0] == header[-1] == '"':
@@ -181,7 +189,7 @@ class SnippetNode(template.Node):
     return app_template.render(os.path.join(os.path.dirname(__file__), 
       self.snippet), context)
 
-class SmallBoxNode(template.Node):
+class ContentNode(template.Node):
   def __init__(self, nodelist, path, header, template):
     self.nodelist = nodelist
     self.header = header
@@ -202,6 +210,18 @@ class SmallBoxNode(template.Node):
         node = Node(title=self.header, content = content, path='aa')
     return app_template.render(os.path.join(os.path.dirname(__file__), 
       self.template), { "header": node.title, "content": node.content})
+
+
+class SmallBoxNode(template.Node):
+  def __init__(self, nodelist, header, template):
+    self.nodelist = nodelist
+    self.header = header
+    self.template = template
+
+  def render(self, context):
+    content = self.nodelist.render(context)
+    return app_template.render(os.path.join(os.path.dirname(__file__), 
+      self.template), { "header": self.header, "content": content})
 
 class OnlyOnMonthNode(template.Node):
   def __init__(self, nodelist, months):
@@ -233,6 +253,7 @@ class PageAttributeNode(template.Node):
       page.put()
     return page.__dict__[self.attribute]
 
+register.tag('node', do_node)
 register.tag('smallbox', do_smallbox)
 register.tag('contentbox', do_contentbox)
 register.tag('flickr', do_flickr)
