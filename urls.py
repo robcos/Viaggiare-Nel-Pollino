@@ -19,5 +19,6 @@ urlpatterns = patterns(
     '',
     ('admin/pages.html', 'admin.pages'),
     ('admin/thanks.html', 'admin.thanks'),
+    ('admin/edit/.*', 'admin.edit'),
     ('.*', 'legacy.legacy'),
     )

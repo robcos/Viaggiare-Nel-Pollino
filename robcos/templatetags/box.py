@@ -194,20 +194,19 @@ class ContentNode(template.Node):
     self.path = path
 
   def render(self, context):
-    content = self.nodelist.render(context)
     node = None
     if self.path != None:
       node = Node.by_path(self.path)
       if node != None and node.content == None:
         node.path = str(self.path)
-        node.content = unicode(content)
+        node.content = unicode(self.nodelist.render(context))
         node.title = unicode(self.header)
         node.put()
     else:
         node = Node(title=self.header, content = content, path='')
     context.update({
-      "header": self.header, #deprecated
-      "content": content, #deprecated
+      "header": node.title, #deprecated
+      "content": node.content, #deprecated
       "node": node
     })
  

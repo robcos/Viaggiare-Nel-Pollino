@@ -39,6 +39,7 @@ import os
 import re
 import datetime
 from robcos.models import Page
+from robcos.models import Node
 
 
 def pages(request):
@@ -60,3 +61,16 @@ def pages(request):
 
 def thanks(request):
   return shortcuts.render_to_response('thanks.html', {})
+
+def edit(request):
+  nodepath = request.path.replace('/admin/edit', '')
+  node = Node.by_path(nodepath)
+  if request.method == 'GET':
+    return shortcuts.render_to_response('edit.html', {
+      'node': node
+    })
+  if request.method == 'POST':
+    node.title = request.POST.get('node.title')
+    node.content = request.POST.get('node.content')
+    node.put()
+    return HttpResponseRedirect(request.path)
