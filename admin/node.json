@@ -1,0 +1,8 @@
+<form method="post">
+  <h2>{{ node.path }}</h2>
+  <label>Title</label>
+  <input value="{{node.title}}" name="node.title" size="80"><br/>
+  <label>Content</label>
+  <textarea name="node.content" cols="80" rows="20">{{node.content}}</textarea>
+  <input type="submit" value="Salva">
+</form>
