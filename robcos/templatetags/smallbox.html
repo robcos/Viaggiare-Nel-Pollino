@@ -1,11 +1,12 @@
 {% autoescape off %}
-<div class="sidebar-box">
-<h1>{{header}}
 {% if is_admin %}
-<a class="admin" target="_blank" href="/admin/edit{{node.path}}">Edit</a>
+<div class="sidebar-box node" id="/node{{node.path}}">
+{% else %}
+<div class="sidebar-box">
 {% endif %}
-</h1>
-  <div class="content">
+  <h1 class="title" id="/node{{node.path}}/title">{{header}}</h1>
+  <div style="width:5em" id="/node{{node.path}}/toolbar"></div>
+  <div class="content" id="/node{{node.path}}/content">
   {{content}}
   </div>
 </div>

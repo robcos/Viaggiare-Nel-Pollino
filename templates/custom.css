@@ -70,7 +70,7 @@ body {
   font-weight: bold;
 }
 
-.sidebar-box h1 {
+.sidebar-box h1, .sidebar-box .title {
   font-size:1.1em;
   margin: 0 0 0.4em 0;
   padding:0;
@@ -226,3 +226,8 @@ li {
 a.admin {
   color:red;
 }
+ 
+#/node/small/info/title {
+  background-color: red;
+}
+

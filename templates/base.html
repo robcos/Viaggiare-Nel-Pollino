@@ -7,7 +7,31 @@
   <meta name="keywords" content="{% keywords %}{% block keywords %}Pollino, Agriturismo, Guida, Parco Nazionale, Escursioni, Trekking, Visite Guidate, Rafting, Basilicata, Rotonda, Potenza, Lucania, Calabria, Pino Loricato{% endblock %}{% endkeywords%}"/>
   <meta name="google-site-verification" content="2in8mPKASoP8hrAQzXu_8l07UoWD0gkwEoj65VoTQCE" />
   <title>{% title %}{% block title %} {% endblock %}{% endtitle %} | Viaggiare Nel Pollino</title>
-  <link rel="stylesheet" type="text/css" href="/style.css">
+{% if is_admin %}
+  <script src="closure-library/closure/goog/base.js"></script>
+  <script src="editor.js"></script>
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/common.css">
+
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/button.css" />
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/dialog.css" />
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/linkbutton.css" />
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/menu.css">
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/menuitem.css">
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/menuseparator.css">
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/tab.css" />
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/tabbar.css" />
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/toolbar.css" />
+
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/colormenubutton.css" />
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/palette.css" />
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/colorpalette.css" />
+
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/editor/bubble.css" />
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/editor/dialog.css" />
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/editor/linkdialog.css" />
+  <link rel="stylesheet" href="/closure-library/closure/goog/css/editortoolbar.css" />
+
+{% endif %}
 {% if validate %}
   <script type="text/javascript">
     window.onload = function() {
@@ -18,8 +42,13 @@
     }
   </script>
 {% endif %}
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
+{% if is_admin %}
+<div id="editor"></div>
+{% endif %}
+
 <div id="doc4" class="yui-t2">
   <div id="hd">
     <!-- MASTHEAD START -->
@@ -64,5 +93,10 @@
 {% if not validate %}
 {% include "_analytics.html" %}
 <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=robcos"></script> 
+{% endif %}
+ {% if is_admin %}
+  <script type="text/javascript">
+    setupEditors();
+  </script>
 {% endif %}
 </html>

@@ -31,7 +31,9 @@ import django
 from django import http
 from django import shortcuts
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.http import HttpResponseNotFound
+from django.core import serializers
 
 # Python
 import logging
@@ -74,3 +76,18 @@ def edit(request):
     node.content = request.POST.get('node.content')
     node.put()
     return HttpResponseRedirect(request.path)
+
+def json(request):
+  nodepath = request.path.replace('/node', '')
+  nodepath = nodepath.replace('.json', '')
+  node = Node.by_path(nodepath)
+  response = HttpResponse()
+
+  if request.method == 'POST':
+    node.title = request.POST.get('title')
+    node.content = request.POST.get('content')
+    node.put()
+  
+  data = serializers.serialize("json", [node], stream=response)
+  response['Content-Type'] = 'text/json'
+  return response
