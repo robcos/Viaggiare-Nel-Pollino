@@ -30,7 +30,7 @@ from google.appengine.ext.db import djangoforms
 import django
 from django import http
 from django import shortcuts
-from django.http import HttpResponseRedirect
+from django.http import HttpResponsePermanentRedirect
 from django.http import HttpResponseNotFound
 
 # Python
@@ -47,7 +47,9 @@ def legacy(request):
     return HttpResponseNotFound("404 - Not found")
 
   if path == "index.html":
-    return HttpResponseRedirect("/")
+    return HttpResponsePermanentRedirect("/")
+  if path == "guida.html":
+    return HttpResponsePermanentRedirect("/guida_pollino.html")
   if path == "":
     path = "index.html"
   try:
