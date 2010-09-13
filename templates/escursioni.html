@@ -1,37 +1,31 @@
 {% extends "base.html" %}
-{% block title %}
- Escursioni, Trekking, Passeggiate nel Parco Nazionale del Pollino
-{% endblock %}
+{% block title %}Escursioni, Trekking, Passeggiate nel Parco Nazionale del Pollino{% endblock %}
+{% block header %}Escursioni e visite nel Parco Nazional del Pollino{% endblock %}
+{% block description %}Il Pollino è per tutti. Visitate Parco con Escursioni, Trekking, Mountain Bike, da soli oppure con una guida ufficiale{% endblock %}
+{% block keywords %}Escursioni, Trekking, Passeggiate, Pollino, Riti arborei, Mountain Bike, Maratea{% endblock %}
 {% block body %}
 {% load box %}
 {% contentbox "Guida ufficiale del parco nazionale del pollino" %}
-Se per la vostra vacanza pensate di affidarvi ad una guida escursionistica, visitate la pagina <a href="/guida_pollino.html">GUIDA DEL POLLINO</a><br/>
+Se per la vostra vacanza pensate di affidarvi ad una guida escursionistica, visitate la pagina <p class="important"><a href="/guida_pollino.html">GUIDA DEL POLLINO</a></p>
 {% endbox %}
-{% local "Il Pollino è per tutti" "escursioni/mainColumnParagraphs/0/image/v170_monte_pollino.jpg" horizontal right %}
-<!-- TODO(robcos): add links -->
-<p><strong>ESCURSIONI E TREKKING</strong><br/>
-Per chi &egrave; allenato a camminare anche pi&ugrave; di 5 ore al giorno, ma senza difficolt&agrave; alpinistiche, e particolari prestazioni. Solo voglia di camminare.</p>
-<p>&nbsp;</p>
-<p><strong>TREKKING PER FAMIGLIE</strong></p>
+{% local "Il Pollino è per tutti" "escursioni/mainColumnParagraphs/0/image/v170_monte_pollino.jpg" right vertical %}
+<a class="struttura" href="/escursioni/trekking.html">Escursioni e trekking&nbsp;&raquo;</a>
+<p>Per chi &egrave; allenato a camminare anche pi&ugrave; di 5 ore al giorno, ma senza difficolt&agrave; alpinistiche, e particolari prestazioni. Solo voglia di camminare.</p>
+<a class="struttura" href="/escursioni/famiglia.html">Trekking per famiglie&nbsp;&raquo;</a>
 <p>Per chi ama condividere la natura con la propria famiglia</p>
-<p>&nbsp;</p>
-<p><strong>TOUR e GITE<br/>
-</strong>Per chi vuole &quot;vagare&quot; per monti, boschi, fiumi, centri storici, punti panoramici, aree archeologiche prati, farfalle e altri animali, spostandosi in auto, senza la necessit&agrave; di fare camminate difficili e pi&ugrave; lunghe di 30-60 minuti. Anche per gruppi numerosi in gita.</p>
-<p>&nbsp;</p>
-<p><strong>TREKKING DEI RITI ARBOREI</strong><br/>
-Quando l'animale pi&ugrave; interesante da conoscere &egrave; l'uomo &quot;culturale&quot;, seguendo i RITI ARBOREI</p>
-<p>&nbsp;</p>
-<p><strong>MOUNTAIN BIKE<br/>
-</strong>Per chi ama vagare nel Pollino seguendo la complessa rete di strade sterrate e sentieri percorribili in bicletta, dalla Costa del Tirreno fino allo Jonio</p>
-<p>&nbsp;</p>
-<p><strong>TREKKING GEOLOGICO E TEMATICI</strong><br/>
-Quando si vuole conoscere il Pollino partendo da un punto di vista particolare: geologia, zoologia, antropologia, storia, lingua, botanica, fotografia, neve, ecc</p>
-<p>&nbsp;</p>
-<p><strong>TREKKING MARATEA: NON SOLO MARE</strong><br/>
-Camminare sulla Costa di Maratea</p>
-<p>&nbsp;</p>
-<p><strong>MUOVERSI DA SOLI</strong></p>
+<a class="struttura" href="/escursioni/gite.html">Tour e gite&nbsp;&raquo;</a>
+<p>Per chi vuole &quot;vagare&quot; per monti, boschi, fiumi, centri storici, punti panoramici, aree archeologiche prati, farfalle e altri animali, spostandosi in auto, senza la necessit&agrave; di fare camminate difficili e pi&ugrave; lunghe di 30-60 minuti. Anche per gruppi numerosi in gita.</p>
+<a class="struttura" href="/escursioni/antropologia.html">Trekking dei riti arborei&nbsp;&raquo;</a>
+<p>Quando l'animale pi&ugrave; interesante da conoscere &egrave; l'uomo &quot;culturale&quot;, seguendo i RITI ARBOREI</p>
+<a class="struttura" href="/escursioni/mountainbike.html">Mountain bike&nbsp;&raquo;</a>
+<p>Per chi ama vagare nel Pollino seguendo la complessa rete di strade sterrate e sentieri percorribili in bicletta, dalla Costa del Tirreno fino allo Jonio</p>
+<a class="struttura" href="/escursioni/geologia.html">Trekking geologico e tematici&nbsp;&raquo;</a>
+<p>Quando si vuole conoscere il Pollino partendo da un punto di vista particolare: geologia, zoologia, antropologia, storia, lingua, botanica, fotografia, neve, ecc</p>
+<a class="struttura" href="/escursioni/maratea.html">Trekking Maratea: non solo mare&nbsp;&raquo;</a>
+<p>Camminare sulla Costa di Maratea</p>
+<!--TODO restore this link <a class="struttura" href="/escursioni/?">Muoversi da soli&nbsp;&raquo;</a>
 <p>Suggerimenti per visitare il Pollino e dintorni in completa autonomia</p>
+-->
 {% endbox %}
 {% endblock %}
 {% block right %}
