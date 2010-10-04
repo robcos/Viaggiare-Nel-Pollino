@@ -67,6 +67,7 @@ TUMAC ME DRUGEN<br/>
 {% block right %}
   {% load call %}
   {% call "slideshow.html" set_id="72157615688666164" %}
+{% comment %}
   {% smallbox Informazioni e prenotazioni %}
     <ul class="phones">
       <li>tel. 0981 32142</li>
@@ -78,6 +79,7 @@ TUMAC ME DRUGEN<br/>
 Adulti<b> € 25-30</b> al giorno<br/>Bambini <b>3-10</b> anni <b>sconto 30%</b><br/>Bambini fini a 3 anni <b>GRATIS</b><br/><br/>
 Pagamento anche con carta di credito<br/>VISA<br/>MASTERCARD<br/>AURA<br/>PAYPAL
   {% endbox %}
+{% endcomment %}
   {% call "prenota_visita.html" %}
   {% call "escursioni.html" %}
 {% endblock %}
