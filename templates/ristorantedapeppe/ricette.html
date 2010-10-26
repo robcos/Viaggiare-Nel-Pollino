@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-{% block title %}
-{% endblock %}
+{% block title %}Le ricette del Ristorante da Peppe{% endblock %}
+{% block header %}Le ricette del Ristorante da Peppe{% endblock %}
+{% block description %}Il Ristorante da Peppe e' uno dei migliori ristoranti del Parco Nazionale del Pollino{% endblock %}
+{% block keywords %}Ricette, Ristorante, Pollino, Rotonda, Gambero Rosso, Guida Michelin{% endblock %}
 {% block body %}
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="ricette/mainColumnParagraphs/0/image/ricetta_antipasti.jpg" class="contentImage_left" alt=""/>
-	<h2>Antipasti</h2>
+  {% load box %}
+  {% local "Antipasti" "ricette/mainColumnParagraphs/0/image/ricetta_antipasti.jpg" right horizontal %}
 <ul>
     <li>Antipasto alla Rotondese</li>
     <li>Prosciutto del Pollino</li>
@@ -13,14 +13,8 @@
     <li>Ricotta del Pastore</li>
     <li>Melanzane e Peperoni <em>&quot;Kijne&quot;</em></li>
 </ul>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="ricette/mainColumnParagraphs/00/image/ricetta_lagane.jpg" class="contentImage_right" alt=""/>
-	<h2>Primi</h2>
+	{% endbox %}
+  {% local "Primi" "ricette/mainColumnParagraphs/00/image/ricetta_lagane.jpg" right horizontal %}
 <ul>
     <li>Raviolini alle ortiche o con burro e salvia</li>
     <li>Fusilli ai funghi porcini</li>
@@ -28,101 +22,67 @@
     <li>Gnocchetti con ricotta ed erbette del Pollino</li>
     <li>Minestra di <em>&quot;Patane e Vajane&quot;</em></li>
 </ul>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="ricette/mainColumnParagraphs/02/image/ricetta_secondi.gif" class="contentImage_left" alt=""/>
-	<h2>Secondi</h2>
+	{% endbox %}
+  {% local "Secondi" "ricette/mainColumnParagraphs/02/image/ricetta_secondi.gif" right horizontal %}
 <ul>
     <li>Capretto&nbsp;con patate e peperoni </li>
     <li>Bocconcini di coniglio al profumo del Pollino&nbsp;</li>
     <li>Filetto di maiale alle bacche di ginepro</li>
 </ul>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="ricette/mainColumnParagraphs/01/image/ricetta_zafarane.jpg" class="contentImage_right" alt=""/>
-	<h2>Contorni</h2>
+	{% endbox %}
+  {% local "Contorni" "ricette/mainColumnParagraphs/01/image/ricetta_zafarane.jpg" right horizontal %}
 <ul>
     <li><em>&quot;Zafarane Krusche&quot;</em> </li>
     <li>Funghi del Pollino </li>
     <li>Verdure alla griglia </li>
 </ul>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="ricette/mainColumnParagraphs/03/image/ricetta_dessert.jpg" class="contentImage_left" alt=""/>
-	<h2>Dessert</h2>
-<UL><LI>Semifreddo alle mandorle</LI><LI>Crostata alla frutta</LI><LI>Ciambella con mele e mandorle</LI></UL>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="ricette/mainColumnParagraphs/04/image/africana.jpg" class="contentImage_left" alt=""/>
-	<h2>Melanzana Rossa di Rotonda DOP</h2>
+	{% endbox %}
+  {% local "Dessert" "ricette/mainColumnParagraphs/03/image/ricetta_dessert.jpg" right horizontal %}
+<ul><li>Semifreddo alle mandorle</li><li>Crostata alla frutta</li><li>Ciambella con mele e mandorle</li></ul>
+	{% endbox %}
+  {% local "Melanzana Rossa di Rotonda DOP" "ricette/mainColumnParagraphs/04/image/africana.jpg" left horizontal %}
 Il Ristorante da Peppe ha da sempre dato particolare importanza al recupero di antichi prodotti e vecchie ricette.<br/>
 <br/>
-In Particolare la Melanzana Rossa di Rotonda, antico ortaggio di origine africana che viene coltivato esclusivamente a Rotonda sin dalla fine del 1800, viene proposto in diverse preparazioni dall'antipasto al dolce.<span><a href="http://www.flickr.com/photos/22306268@N06/sets/72157603783945595/" target="_blank"/></span>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="ricette/mainColumnParagraphs/07/image/ricetta_melanzane.jpg" class="contentImage_right" alt=""/>
-	<h2>Melanzane</h2>
+In Particolare la Melanzana Rossa di Rotonda, antico ortaggio di origine africana che viene coltivato esclusivamente a Rotonda sin dalla fine del 1800, viene proposto in diverse preparazioni dall'antipasto al dolce.
+	{% endbox %}
+  {% local "Melanzane" "ricette/mainColumnParagraphs/07/image/ricetta_melanzane.jpg" right horizontal %}
 &nbsp;Cucinate in diversi modi. Sia la melanzana &quot;normale&quot; che la Melanzana Rossa di Rotonda DOP.<br/>
 <br/>
 Da Peppe per valorizzare la Melanzana Rossa di Rotonda DOP, organizza ognni anno il 25 AGOSTO, la <span><a href="http://www.flickr.com/photos/22306268@N06/sets/72157603783945595/" target="_blank">Sagra della Melanzana Rossa</a>.</span><br/>
 Scorrendo le foto alcuni delle numerose preparazioni, alcune originali, alcune rivisitate dalle antiche ricette.<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="ricette/mainColumnParagraphs/06/image/rascatelli_ai_funghi_porcini.jpg" class="contentImage_left" alt=""/>
-	<h2>Rascatelli ai Funghi Porcini</h2>
+	{% endbox %}
+  {% local "Rascatelli ai Funghi Porcini" "ricette/mainColumnParagraphs/06/image/rascatelli_ai_funghi_porcini.jpg" left horizontal %}
 &nbsp;Il Rascatello &egrave; un fusillo lavorato a mano, con l'uso di una stecca di metallo.<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="ricette/mainColumnParagraphs/05/image/ricetta_minestra.jpg" class="contentImage_right" alt=""/>
-	<h2>Minestra Patane e Vajane</h2>
+	{% endbox %}
+  {% local "Minestra Patane e Vajane" "ricette/mainColumnParagraphs/05/image/ricetta_minestra.jpg" right horizontal %}
 Piatto tradizionale e tipico<br/>
 Una purea di Patate e Fagioloni verdi, con soffritto e Peperoni secchi.<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
+	{% endbox %}
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Prenota il tuo Pranzo al Ristorante da Peppe</div>
-<b>Prezzi</b><br/><br/><b>Alla Carta<br/></b>Mediamente un pranzo (bibite escluse) è di circa <b>€ 26,00</b><br/><br/>Prenota scrivendo a <a href="/contatti.html">Contatti</a> <br/><br/><b>Carte di Credito<br/>AE-DINERS-CARTA SÌ-VISA</b>
-<div class="line"><br/></div>
-	</div>
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Menù Turistici</div>
-<b>Menù del Contadino<br/></b>Prosciutto formaggio e sott'oli<br/>Fusilli ai cardoncelli<br/>Capicollo alle erbette del Pollino<br/>Dolce della Casa<br/><b>€&nbsp;18.50</b><br/><br/><b>Menù del&nbsp; Pastore<br/></b>Spaghetti alla chitarra all'ortolana<br/>Tagliata con rughetta e pomodorini<br/>Composè di frutta<br/><b>€ 12.50</b><br/><br/>									
-<div class="line"><br/></div>
-	</div>
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Sagra della Melanzana Rossa</div>
-25 Agosto 2008<br/>Serata con degustazione delle ricette a Base di melanzana Rossa di Rotonda <br/><a target="_blank" href="http://www.flickr.com/photos/22306268@N06/sets/72157603783945595/">BOOK FOTOGRAFICO</a><br/><a target="_blank" href="http://www.flickr.com/photos/22306268@N06/sets/72157603783945595/"> </a><br/><br/>Per informazioni rivolgersi al Ristorante da Peppe
-	</div>
+  {% load call %}
+  {% call "slideshow.html" set_id="72157603783945595" %}
+  {% smallbox "Prezzi" %}
+  <img align="right" alt="Si accettano carte di credito" src="/ristorantedapeppe/carta-di-credito.gif">
+<p>
+<b>Alla Carta<br/>
+</b>Mediamente un pranzo (bibite escluse) è di circa <b>€ 26,00</b>
+</p>
+<p>
+<b>Menù Turistici</b>
+<br/>Del Contadino <b>€ 18,50</b>
+<br/>Del Pastore <b>€ 12,50</b>
+</p>
+<p>
+<b>Si accettano carte di Credito</b>
+</p>
+  {% endbox %}
+  {% smallbox Informazioni e prenotazioni %}
+    <ul class="phones">
+      <li>tel. 0973.661251</li>
+    </ul>
+    Ricordatevi di citare il nostro sito!
+  {% endbox %}
+ 
+  {% call "escursioni.html" %}
 {% endblock %}
