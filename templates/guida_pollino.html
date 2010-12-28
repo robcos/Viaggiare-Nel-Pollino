@@ -1,14 +1,12 @@
 {% extends "base.html" %}
-{% block title %}
- Viaggiare nel Parco Nazionale del Pollino... con una Guida
-{% endblock %}
+{% block title %}Guida del Pollino{% endblock %}
+{% block header %}Guida ufficiale del Parco Nazionale del Pollino{% endblock %}
+{% block description %}La guida del Pollino Giuseppe Cosenza mostra i segreti del Parco Nazionale del Pollino{% endblock %}
+{% block keywords %}Guida, Pollino, Parco, Rotonda, Laino, Castelluccio, Montagna{% endblock %}
 
 {% block body %}
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="guida/mainColumnParagraphs/00/image/stonehenge.JPG" class="contentImage_right" alt=""/>
-Mi chiamo<span><br/>
-Giuseppe Cosenza</span><br/>
+  {% load box %}
+	{% local "Giuseppe Cosenza" guida/mainColumnParagraphs/00/image/stonehenge.JPG" right horizontal %}
 Sono l&rsquo;autore dei testi e delle foto (fatta qualche eccezione) di questo sito.<br/>
 La mia passione per la natura e per la mia terra si &egrave; trasformata in un lavoro: <br/>
 Svolgo l&rsquo;attivit&agrave; di Guida Escursionistica (ma anche emozionale), soprattutto nel Parco Nazionale del Pollino dove vivo, ma anche in altre aree protette e non della Basilicata e della Calabria, e ovviamente mi impegno anche nella sua tutela.<br/>
@@ -16,14 +14,8 @@ Sono anche gestore dell&rsquo; Agriturismo Asklepios, quello che mi piace defini
 Attualmente sto progettando un Tour della Basilicata, una terra affascinante e sconosciuta dal punto di vista escursionistico ambientale, tra monti, boschi, chiese rupestri, castelli, calanchi e centri storici.<br/>
 Non esitate a visitare il Pollino e la Basilicata, &egrave; una terra da profonde emozioni. Ovviamente potrete visitarla da soli, ma con una guida centrate gli obiettivi, non perdete i dettagli e soprattutto non sprecate il vostro tempo. <br/>
 Il sito <a href="http://www.viaggiarenelpollino.it">www.viaggiarenelpollino.it</a> &egrave; nato dall&rsquo;idea mia e di mio fratello Roberto (il Webmaster) di mettere in rete uno strumento di promozione delle mie attivit&agrave; ma, visto anche i risultati, di realizzare uno strumento efficace di promozione del territorio e delle cose migliori e particolari che offre.<br/>
-	</div>
-	<div style="clear:both;">
-			<br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="guida/mainColumnParagraphs/01/image/2279743227_0ecb704e24_m.jpg" class="contentImage_left" alt=""/>
-	<h2>Con chi lavoro? Con chi ho lavorato?</h2>
+  {% endbox %}
+	{% local "Con chi lavoro? Con chi ho lavorato?" "guida/mainColumnParagraphs/01/image/2279743227_0ecb704e24_m.jpg" left vertical %}
 Dal 1999 sono tornato a vivere a Rotonda, nel Parco Nazionale del Pollino, svolgendo la mia attivit&agrave; di guida come attivit&agrave; principale, accompagnando persone e/o gruppi che occasionalmente o abitualmente visitano il Pollino.<br/>
 <br/>
 Con alcune agenzie o associazioni si &egrave; istaurato una collaborazione continuativa, oltre che come guida in senso stretto, anche nella redazione di programmi e nell&rsquo;organizzazione logistica dei soggiorni:<br/>
@@ -31,16 +23,10 @@ Con alcune agenzie o associazioni si &egrave; istaurato una collaborazione conti
 <br/>
 Con altri Enti ho collaborato saltuariamente, in dipendenza delle loro esigenze e della mia disponibilit&agrave;<br/>
 <span>1.&nbsp;&nbsp; &nbsp;JOYCE (USA) in inglese</span><br /><span>2.&nbsp;&nbsp; &nbsp;CAI (DIVERSE SEZIONI) </span><br /><span>3.&nbsp;&nbsp; &nbsp;WWF ITALIA (UMBRIA, BASILICATA) prima attivit&agrave; nel 1986, a Perugia</span><br /><span>4.&nbsp;&nbsp; &nbsp;COOPERATIVA TELLUSMATER (LATRONICO, POTENZA)</span><br /><span>5.&nbsp;&nbsp; &nbsp;COOPERATIVA ECOAMBIENTE (CHIAROMONTE, POTENZA)</span><br /><span>6.&nbsp;&nbsp; &nbsp;PANDA AVVENTURA (ROMA) come animatore nei campi per ragazzi.</span><br />7.&nbsp;&nbsp; &nbsp;ASSOCIAZIONE GUIDE UFFICIALI DEL PARCO<br />8.&nbsp;&nbsp; &nbsp;ASSOCIAZIONE GAE BASILICATA<br /><span>9.&nbsp;&nbsp; &nbsp;LAO SRL (LAINO BORGO, COSENZA)</span><br /><span>10.&nbsp;&nbsp; &nbsp;COOPERATIVA ELFO (PERUGIA), socio fondatore.</span><br /><span>11.&nbsp;&nbsp; &nbsp;COOPERATIVA SILVA (CASTROVILLARI, COSENZA)</span><br />12.&nbsp;&nbsp; &nbsp;SCUOLE ELEMENTARI, MEDIE INFERIORI E SUPERIORI<br /><span>13.&nbsp;&nbsp; &nbsp;WILDERNESSE ANIMATION SERVICE, (LAGONEGRO, POTENZA)</span><br />14.&nbsp;&nbsp; &nbsp;APT BASILICATA <br /><span>15.&nbsp;&nbsp; &nbsp;MONDO MARATEA SERVIZI TURISTICI (MARATEA, POTENZA)</span><br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="guida/mainColumnParagraphs/0/image/io2.jpg" class="contentImage_left" alt=""/>
-	<h2>Curriculum sintetico</h2>
+  {% endbox %}
+	{% local "Curriculum sintetico" "guida/mainColumnParagraphs/0/image/io2.jpg" right horizontal %}
 Dott. Giuseppe Cosenza
-<ol>
+<ul>
     <li>Dottore in Agraria </li>
     <li>Guida Ufficiale del Parco Nazionale del Pollino </li>
     <li>Guida Escursionistica Ambientale della Regione Basilicata </li>
@@ -50,11 +36,8 @@ Dott. Giuseppe Cosenza
     <li>Operatore Agrituristico </li>
     <li>Discreta conoscenza Lingua Inglese in campo naturalistico</li>
     <li>Abilitato all'insegnamento di Scienze nelle scuole medie superiori</li>
-</ol>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
+</ul>
+  {% endbox %}
 {% endblock %}
 {% block right %}
   {% load call %}

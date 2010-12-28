@@ -4,7 +4,7 @@
 {% block body %}
     {% load box %}
 	  {% flickr "L'Agriturismo più piccolo del mondo" 2348/2213554074_ddbeb6b515_m.jpg left horizontal %}
-<p>"Il pi&ugrave; piccolo agriturismo del mondo", &egrave; gestito da una <a href="/guida.html">Guida Ufficiale del Parco </a>
+<p>"Il pi&ugrave; piccolo agriturismo del mondo", &egrave; gestito da una <a href="/guida_pollino.html">Guida Ufficiale del Parco </a>
 </p>
 <br/>
 <br/>
@@ -65,12 +65,14 @@ Non perdetevi il <a href="/escursioni/famiglia.html">Trekking per Famiglie</a> c
   {% endbox%}
   {% call "prenota_visita.html" %}
 
+  {% comment %}
   {% smallbox "Tariffe Agriturismo"%}
 Pernottamento e prima colazione <br/>Prime due persone <b>€
 25 a persona</b><br/>Dalla terza persona in poi <b>€ 20</b><br/>Riduzione 50% per ragazzi tra i 6 e
 i 12 anni.<br/>Pranzo e cena presso agriturismi e ristoranti scelti da <b>€ 12,50 a €
 18,50</b><br/>Disponibilità della cucina attrezzata<br/><span style="font-weight:
 bold;">&nbsp;</span><br/><span>Pacchetto Escursionistico<br/></span>Comprende:<br/>1. un pernottamento con prima colazione, <br/>2. un pranzo al sacco,<br/>3. una merenda al rientro dall'escursione <br/>4. una escursione guidata nel Parco<br/>5. uso della cucina attrezzata<br/>6. disponibilità Prodotti aziendali<br/>&nbsp;<b>€ 45,00</b> al giorno a persona<br/><br/>&nbsp;<br/><span>Trekking per famiglie<br/></span>Comprende, oltre a tutti i punti sopra, una discesa rafting facile e/o una escursione con l’asino<br/>Il trekking deve avere un durata minima di 4 giorni<br/>Adulti <b>€ 45.00,</b>&nbsp; ragazzi fino a 18 anni <b>€ 22.50</b> al giorno
-   {% endbox %}
+  {% endbox %}
+  {% endcomment %}
    {% call "escursioni.html" %}
 {% endblock %}

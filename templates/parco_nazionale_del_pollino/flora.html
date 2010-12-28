@@ -1,105 +1,45 @@
 {% extends "base.html" %}
-{% block title %}
-{% endblock %}
+{% block title %}Flora del Pollino{% endblock %}
+{% block header %}Flora del Pollino{% endblock %}
+{% block description %}La flora del Pollino è rappresentata da almeno 1500 specie delle 5600 censite nel territorio italiano, elenchiamo quindi solo quelle più rappresentative{% endblock %}
+{% block keywords %}Flora, Pino Loricato, Leccio, Faggio, Ontano Napoletano, Abete, Aceri, Praterie, Agrifoglio, Pollino{% endblock %}
 
 {% block body %}
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="flora/mainColumnParagraphs/0/image/2522339650_fe8f056320_m.jpg" class="contentImage_left" alt=""/>
-	<h2>Vegetazione e Flora</h2>
+	{% load box %}
+  {% local "Introduzione" "flora/mainColumnParagraphs/0/image/2522339650_fe8f056320_m.jpg" left horizontal %}
 La Serra Dolcedorme (la quota pi&ugrave; alta 2267 m.), dista circa 36 km dal Mar Tirreno e appena 25 km dal Mar Ionio; questa vicinanza al mare influenza notevolmente il clima del Massiccio. La latitudine colloca il Pollino in un contesto climatico mediterraneo (umido e piovoso d'inverno, caldo e secco d'estate), ma alle medio-alte quote (sopra i 1500 m) il clima presenta caratteri temperato-oceanici (con frequenti acquazzoni estivi e inverni nevosi). Per incontrare rilievi di pari altezza e natura rocciosa, bisogna percorrere verso nord pi&ugrave; di 280 km: si tratta quindi di un rilievo con una posizione relativamente isolata dalle grandi cime appenniniche dell'Italia centrale e alpina, mentre a sud la Sila e l'Aspromonte non superano i 2000 m e sono geologicamente diverse dal Pollino. Infatti, un'altra peculiarit&agrave; del Parco &egrave; di presentare una struttura geologica molto differenziata; questo comporta che boschi e prati si estendano su terreni di origine calcarea, argillosa, marnosa o lavica. Questo mosaico di caratteri climatici, altimetrici, e geologici e la sua posizione avanzata nel Mediterraneo rendono il Pollino una sorta di compendio della Flora, riunendo qui specie diffuse sia sulle coste marine sia in alta montagna, sia in Africa sia nel Nord Europa. La flora del Pollino &egrave; rappresentata da almeno 1500 specie delle 5600 censite nel territorio italiano, elenchiamo quindi solo quelle pi&ugrave; rappresentative.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<h2>LECCIO (Quercus ilex) </h2>
+	{% endbox %}
+	{% contentbox "Leccio (Quercus ilex)" %}
 Quercia dominante della macchia mediterranea sempreverde, forma boschi dal livello del mare fino a quote di 1000 m. Diffusa alle basse quote del parco, lascia spazio nelle radure a numerose piante aromatiche come il mirto, il rosmarino, la salvia e la lavanda.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="flora/mainColumnParagraphs/01/image/2248738915_8d55118d68_m.jpg" class="contentImage_left" alt=""/>
-	<h2>FAGGIO (Fagus sylvatica)</h2>
+	{% endbox %}
+  {% local "Faggio (Fagus sylvatica)" "flora/mainColumnParagraphs/01/image/2248738915_8d55118d68_m.jpg" right horizontal %}
 Le sue estese foreste dominano il Pollino tra i 1100 e i 1900, segnando il limite altimetrico massimo del bosco: al di sopra di esso sull'Appennino esistono unicamente le praterie di altitudine. Esistono faggete particolarmente interessanti per la presenza di esemplari ultracentenari e colonnari sul Cozzo Ferriero, Serra del Prete, la Fagosa, Pollinello, Cozzo Pellegrino, Vallata di Abatemarco. In alcune aree i faggi assumono forme particolarmente contorte tanto da meritarsi l'appellativo di &quot;alberi serpenti&quot;: sotto le pendici della Serra Dolcedorme nei pressi del Piano di Acquafredda e sul Cozzo Pellegrino.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<h2>ONTANO NAPOLETANO (Alnus cordata)</h2>
+	{% endbox %}
+	{% contentbox "Ontano Napoletano (Alnus cordata)" %}
 Come l'ontano nero &egrave; un albero che preferisce i terreni umidi e spesso cresce lungo i fiumi. Si distinguono per l'infruttescenza a forma di piccola pigna. L'ontano napoletano &egrave; per&ograve; diffuso unicamente in Campania, Calabria e Basilicata e cresce fino ai 1500 metri di quota. Lo troviamo soprattutto lungo i fiumi Abatemarco e Saraceno: nei pressi del Monte Sparviere esiste una stazione formata da esemplari centenari e colonnari, di notevole valore naturalistico.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<h2>QUERCE CADUCIFOGLIE</h2>
+	{% endbox %}
+	{% contentbox "Querce caducifoglie" %}
 Comuni sono i boschi di Cerro (Quercus cerris) e di Roverella (Quercus pubescens) che si sviluppano tra i 400 e i 1000 m di quota. I boschi pi&ugrave; interessanti di Cerro sono il Bosco Magrizzi e il Bosco di Magnano. Possiamo trovare anche il Farnetto (Quercus frainetto), una quercia poco diffusa in Italia ad areale trans-Adriatico, dalle grandi foglie, presente sui versanti ionici del Parco: nei pressi di Plataci, Cerchiara di Calabria, e sulle colline del fiume Sarmento tra San Costantino Albanese e San Paolo Albanese.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="flora/mainColumnParagraphs/04/image/abete.jpg" class="contentImage_left" alt=""/>
-	<h2>ABETE (Abies alba) </h2>
+	{% endbox %}
+  {% local "Abete (Abies alba) " "flora/mainColumnParagraphs/04/image/abete.jpg" left vertical %}
 Le faggete estese su substrati rocciosi meno calcarei, si vedono contrastare il loro dominio dall'Abete bianco: di conseguenza si viene a formare una speciale associazione vegetale detta Faggeta-Abetina. L'Abete bianco essendo un relitto delle ultime glaciazioni, sopravvive nel sud Italia grazie al microclima delle faggete che soprattutto da giovane lo proteggono dal riverbero del sole estivo. La Faggeta-Abetina &egrave; localizzata nell'area nord-orientale del Parco, dal Santuario della Madonna di Pollino fin sotto la Grande Porta del Pollino, sul monte Caramola, nel bosco di Lagoforano e a Bosco Vaccarizzo dove scende eccezionalmente fino a quota 700 m s.l.m. (ai alla pagina dei Links, troverai un bellissimo sito dedicato all'Abete bianco)
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="flora/mainColumnParagraphs/05/image/2247567746_e0c8fc3ff0_m.jpg" class="contentImage_left" alt=""/>
-	<h2>ACERI </h2>
+	{% endbox %}
+  {% local "Aceri " "flora/mainColumnParagraphs/05/image/2247567746_e0c8fc3ff0_m.jpg" right vertical %}
 Sono gli alberi che in autunno contribuiscono maggiormente a colorare di rosso il paesaggio. Molto interessante &egrave; il raro Acero di Lobelius (Acer lobelii), che diffuso unicamente nel meridione d'Italia, &egrave; possibile trovarlo solo all'interno delle faggete pi&ugrave; intatte.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="flora/mainColumnParagraphs/06/image/lorica-4.jpg" class="contentImage_left" alt=""/>
-	<h2>PINO LORICATO (Pinus leucodermis) </h2>
+	{% endbox %}
+  {% local "Pino Loricato (Pinus leucodermis) " "flora/mainColumnParagraphs/06/image/lorica-4.jpg" left horizontal %}
 Il Pino Loricato rappresenta il vero gioiello del Parco. Si tratta di &quot;fossile vivente&quot; da un punto di vista evolutivo. Il nucleo presente in Italia unicamente nel Parco Nazionale del Pollino viene considerato il relitto di una estensione in epoche remote pi&ugrave; ampia, che doveva abbracciare le coste Italiche e Balcaniche dell'Adriatico. &Egrave; una specie dalle grandi capacit&agrave; di adattamento: vive dagli 800 fino ad oltre i 2200 m s.l.m. Infatti &egrave; l'unico albero che riesce a vivere sull'Appennino al di sopra della faggeta. Per le difficili condizioni climatiche che subisce assume forme che evocano straordinarie sensazioni nella mente di chi lo contempla. Il nome &quot;loricato&quot; lo si deve alla corteccia che negli esemplari ultra centenari (qualche soggetto supera i 950 anni di et&agrave;) ricorda la corazza dei guerrieri romani (la lorica) o la pelle di giganteschi rettili. Il nome scientifico, (leuco=bianco, dermis=pelle), lo si deve al colore grigio-argenteo della corteccia dei rami giovani. &Egrave; localizzato sui costoni rocciosi in direzione est-ovest di Monte Manfriana, Serra Dolcedorme, S. delle Ciavole e S. di Crispo, Monte Pollino, S. del Prete, Timpa della Capanna, Timpa di Viggianello, a sud La Montea, Palanuda, Cozzo del Pellegrino, a nord M. Zaccana e la Spina, Alpe di Latronico. PINO NERO (Pinus nigra) Localizzato spontaneamente su Timpone Dolcetti, sotto la Serra Dolcedorme e sui monti di Orsomarso, oltre che in numerosi rimboschimenti, raggiunge qui il suo limite meridionale.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="flora/mainColumnParagraphs/07/image/2616735738_facdd0b7cb_m.jpg" class="contentImage_left" alt=""/>
-	<h2>PRATERIE </h2>
+	{% endbox %}
+  {% local "Praterie " "flora/mainColumnParagraphs/07/image/2616735738_facdd0b7cb_m.jpg" right vertical %}
 Si dividono in primarie e secondarie: le prime sono tutti le formazioni erbacee al di sopra dei 1900 m di quota e sono di origine naturale, mentre le seconde occupano gli spazi lasciati liberi dal taglio dei boschi operato dall'uomo a quote inferiori. Sono praterie di graminacee come la Sesleria, per&ograve; in Primavera ed Estate si ricoprono di un manto di fiori dai pi&ugrave; svariati colori: Crochi, Cardi, Genziane, Orchidee, Asfodeli, Viole, Campanule, Ranuncoli, Narcisi.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="flora/mainColumnParagraphs/08/image/2349000649_37686aa3a3_m.jpg" class="contentImage_left" alt=""/>
-	<h2>AGRIFOGLIO (Ilex aquifolium)</h2>
+	{% endbox %}
+  {% local "Agrifoglio (Ilex aquifolium)" "flora/mainColumnParagraphs/08/image/2349000649_37686aa3a3_m.jpg" left horizontal %}
 &nbsp;Diffuso un po' ovunque come piccolo arbusto sottomesso da querce e faggi, presenta foglie spinose e bacche rosse. Nell'area delle rocce vulcaniche tra Timpa delle Murge, Timpa di Pietrasasso e Tumbarino questa specie si presenta con esemplari che superano i 5 metri di altezza, creando una sorta di bosco rado forse unico nell'Italia continentale. Ricordiamo che &egrave; una specie protetta anche al di fuori dell'area Parco, perch&eacute; fortemente minacciata di estinzione per la raccolta selvaggia alla quale &egrave; soggetta per le ornamentazioni natalizie.
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="flora/mainColumnParagraphs/09/image/2276972145_f3a7959a1b_m.jpg" class="contentImage_left" alt=""/>
-	<h2>ENDEMISMI</h2>
+	{% endbox %}
+  {% local "Endemismi" "flora/mainColumnParagraphs/09/image/2276972145_f3a7959a1b_m.jpg" right horizontal %}
 <p>Per endemismo si intende una pianta o un animale che vive in un areale molto ristretto. Alcune piante sono localizzate unicamente nell'Area del Parco come l'Achillea rupestris e lo Hieracium portanum; altre presentano stazioni anche al di fuori del Parco come la Campanula pollinensis, il Leucantheum laciniatum, Ptilostemon niveus e la Lereschia thomasii. Quest'ultima &egrave; citata nel Libro Rosso delle Piante d'Italia, la pubblicazione dove si riportano le specie considerate a rischio di estinzione. </p>
 <p>Richiedi gratuitamente il Libro Rosso alla Segreteria Organizzativa Programma di Conservazione - WWF ITALIA&nbsp;</p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
+	{% endbox %}
 {% endblock %}
 {% block right %}
  {% load call %}

@@ -1,23 +1,15 @@
 {% extends "base.html" %}
-{% block title %}
- Welcome to the Pollino National Park
-{% endblock %}
+{% block language %}en{% endblock %}
+{% block title %}Pollino National Park{% endblock %}
+{% block header %}Pollino National Park{% endblock %}
 
 {% block body %}
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="english/mainColumnParagraphs/0/image/pollinoprimo.jpg" class="contentImage_right" alt=""/>
-	<h2>Naturalistic, historic-cultural, photo, information on the Pollino National Park</h2>
+  {% load box %}
+  {% local "Naturalistic, historic-cultural, photo, information on the Pollino National Park" "english/mainColumnParagraphs/0/image/pollinoprimo.jpg" right horizontal %}
 <p>The Pollino National Park is the biggest natural park in Italy, spreading over more than 200.000&nbsp;hectars in areas of absolute wilderness and cultural landscapes in southern Italy.</p>
 <p><br/>
 Founded in 1991 mainly to preserve the last individuals worldwide <strong>of &quot;Loricato&quot; Pine (Bosnian Pine- Pinus leucodermis),</strong> the park is still its last refuge against the human destruction, where the so-called civilization didn&rsquo;t protect the Earth most endangered and precious natural environments. <br/>
 Unlike other holiday destinations where the tourism dominates, our land is the ideal location for a break, whether you&rsquo;re looking for a brisk walk on the highest tops of South Italy, where the view extends to two seas (Ionian and Tyrrhenian Sea) and until Sicily, a demanding trekking, a daredevil ride in canyons down the mountains or just a relaxing break in a natural unspoilt countryside.</p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
 	<img src="english/mainColumnParagraphs/01/image/dolcedormesecondo.jpg" class="contentImage_left" alt=""/>
 The Park is the place for a walking holiday. <strong>Serra Dolcedorme</strong> itself, at 2000 m, is obviously the prime destination for many, although there are many mountain ranges which are just as beautiful and challenging. Amongst them are the <strong>Monte Pollino, Serra delle Ciavole, Serra di Crispo</strong>, where the &quot;Loricato&quot; Pine still climbs the rocky highest tops of this mountains of breathtaking beauty.
 <p><br/>
@@ -27,114 +19,57 @@ Walking in the woods and fields of the Pollino Range, you will have access to ou
 The Park is also the ideal location for historical, cultural and gastronomic holidays, where you can immerse yourself in the local culture, visiting archaeological, religious and historical sites and discover traditions and typical food. Is this healthy and natural food growth from our farmers in a oasis of water and green land that helps to give the Pollino National Park some of the very best places to eat in South Italy. <br/>
 Visiting the Pollino National park is a unique opportunity to spend some time in a full-immersion of wilderness culture, to widen your cultural horizons and join us in a never ending mystic experience. </p>
 <p><strong>Written and Translated by Drs.Claudia Bertoni &amp; Giuseppe Cosenza</strong> </p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="english/mainColumnParagraphs/00/image/senise1.jpg" class="contentImage_right" alt=""/>
-	<h2>Diary of our visit to the Pollino National Park 2001<br/>By Michael Pickering</h2>
+	{% endbox %}
+  {% local "Diary of our visit to the Pollino National Park 2001<br/>By Michael Pickering" "english/mainColumnParagraphs/00/image/senise1.jpg" right horizontal %}
 <p><strong>DAY 1</strong>.</p>
 <p>We arrived as planned in <strong>Matera</strong> (a fascinating place!) and were met in the hotel lobby by our guide, Giuseppe. From Matera Giuseppe drove us all the way to Viggianello, stopping off on the way at Policoro where we studied the remains of the <strong>Greek settlement of Heraklea</strong> (leaving a party of Spanish tourists to invade the museum!). <br/>
 Where else would we like to stop off, Giuseppe asked. He recommended <strong>Senise</strong>. There we had a wonderful reception from people at the church and museum. <br/>
 Sadly, my wife had our camera with her, just when I would have liked to photograph a mother rocking one child each arm in the middle of a deserted vicolo, to the rhythm of a church bell tolling. <br/>
 Happy arrival in the evening at <strong>Viggianello</strong>, where the manager of the <strong>Locanda San Francesco</strong> was kind enough to serve us a late dinner.</p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
 	<img src="english/mainColumnParagraphs/02/image/rotonda_2.jpg" class="contentImage_left" alt=""/>
 <p><strong>DAY 2.</strong></p>
 <p>Did we wish to take a walk or rest on our first full day, asked Giuseppe. <br/>
 Why not a walk, we said, so he drove us up to the vicinity of <strong>Piano Ruggio</strong>. We did a very interesting walk through the high meadows and (cooler!) woodlands, and Peppe introduced us to the local flora and fauna, of which he has an intimate knowledge. He showed us medicinal plants, a tarantula spider, which he hooked out of its tiny lair with a stick, and much else. The meadows are saturated with butterflies, a sight which I have not seen in England or elsewhere since childhood. On the return leg we identified some specific wildlife, including the <strong>Scarce Swallowtail butterfly</strong> (not the ordinary swallowtail!), the yellow-bellied toad, and a large beautiful beetle <strong>(xylocopa violacea</strong>). <br/>
 Giuseppe explained to us the sex-life of the loricato (palebark) pines, which are the unique treasure of this region, and the day finished with delicious icecreams at <strong>Rotonda</strong> before dinner.</p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
 	<img src="english/mainColumnParagraphs/03/image/CIVITA3.jpg" class="contentImage_right" alt=""/>
 <p><strong>DAY 3</strong>.</p>
 <p>A family from Bari with two charming boys joined us for today. We drove to <strong>Civita</strong>, one of the &lsquo;<strong>Albanian&rsquo; villages of Calabria</strong>. We watched an ongoing archeological dig here, and I visited a museum of the history of this remarkable local people, who have preserved their Albanian traditions language since the 16th century when fleeing persecution they arrived in Italy. We bought a recording of their music and a bilingual edition of their fairytales. <br/>
 At lunch-time we peeped into the famed <strong>Raganello Gorge (Gorge of the Little Dragon).</strong> Raganello is mentioned in <strong>Norman Douglas&rsquo; book &ldquo;Old Calabria</strong>&rdquo;. It is in fact the deepest gorge in Europe, and news of it was what first attracted me to the Pollino National Park and the special atmosphere of the region of Calabria. To walk through the gorge is possible with a guide, but involves rock-climbing and even swimming, so our party thought it was a bit too strenuous.</p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
 	<img src="english/mainColumnParagraphs/04/image/viggianello4.jpg" class="contentImage_left" alt=""/>
 <p><strong>DAY 4</strong></p>
 <p>We explored our village (<strong>Viggianello</strong>) today, with Peppe, and visited the <strong>old castle</strong>, which was now being restored as a luxury hotel. Inside we found and photographed some delightful bedspreads crochet&rsquo;d by the proprietor&rsquo;s mother, and listened to an old acoustic gramophone playing Franco Ricci. We stood and admired a fine view of the hills from the rooftop. <br/>
 Some planning was needed at this stage, so we sat in a cafe to do it. First on the list was lunch at a speciality restaurant in Rotonda <strong>(Da Peppe),</strong> where we thoroughly enjoyed the food and service, not to mention a private ball afterwards, with one of us playing the piano, two others dancing, and the owners applauding. After lunch we climbed a hill, while a patch of bad waether circled round us, before returning to Viggianello, where once again we dined in the courtyard of the Locanda. </p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
 	<img src="english/mainColumnParagraphs/05/image/MARATEA5.jpg" class="contentImage_right" alt=""/>
 <p><strong>DAY 5.</strong></p>
 <p>This was the day of the promised excursion to <strong>Maratea</strong> on the Golfo di Policastro. Eric and Barbara Whelpton, authors of <strong>&ldquo;Calabria and the Aeolian Islands&rdquo;,</strong> said that of all places in Italy, Maratea was the one where they would most like to settle. It is in fact a very pretty, small and friendly town. Today we walked first through the cliffside macchia to a small rocky beach, much like a pirate&rsquo;s cove, but populated by unpiratical and not too numerous local holiday-makers. As I recall, it was here that Peppe introduced us to the carob trees, whose podded seeds John the Baptist once ate and which give us the word carat, from their resemblance to coins. After bathing and some packed lunch, we returned to <strong>Maratea</strong> for more delicious ice-creams and I visited an exhibition of unusual artworks by Tasca. The weather broke on the way back to Viggianello, but we sang merrily in the car, and Peppe joined us for dinner. </p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
 	<img src="english/mainColumnParagraphs/06/image/peschiera6.jpg" class="contentImage_left" alt=""/>
 <p><strong>DAY 6</strong>.</p>
 <p>&nbsp;A very long walk today in the forests of the park. Warm, but not too hot. <br/>
 For the later part of the walk, we followed the river <strong>Peschiera,</strong> sometimes hopping from rock to rock. There were no visible fish, but we saw a black squirrel and a host of very beautiful blue dragonflies. We enjoyed our picnic pizzas from the Locanda at a table in front of the forest guardians&rsquo; lodge. In front of the nearby restaurant there were plenty of stalls selling local handicrafts, mushrooms and lemon liqueur. Lots of visitors were bathing in the river shallows. On the return we visited a M<strong>onastery at Saggittario</strong> where an old goose stood on guard. It began to rain a little that evening and we dined indoors. </p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
 	<img src="english/mainColumnParagraphs/07/image/ROMITO7.jpg" class="contentImage_right" alt=""/>
 <p><strong>DAY 7</strong>.</p>
 <p>Hot again. We drove to <strong>Morano</strong>, perhaps the prettiest local village. A fine natural history museum here with adjustable sound effects and a good collection of insects, among other things. In the church, the sacristan, himself almost as dark as the marvellous crib he showed us, carved from a solid block of polished wood, was advising us on how to photograph the church interior to best effect. At the west end was an 18th century organ. It was no longer in use, and my wife felt greatly privileged to have the chance to play it - while the men turned the handle of the bellows. <br/>
 After lunch, to <strong>Mormanno</strong>. Lighning was flashing on the distant mountains. Two of us remained in Mormanno, while the others visited the unique grotto (Grotta del Romito, Papasidero) where there are <strong>two 12000 year old skeletons and a paleolithic rock painting of a bull</strong> - an animal which also occurs here and there in carved symbols of the region, perhaps over a door or on a fountain. <br/>
 At dinner that night we were invited to share in the wedding anniversary celebrations of a family from Taranto who were staying at the Locanda San Francesco. </p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
 	<img src="english/mainColumnParagraphs/08/image/rosalia8.jpg" class="contentImage_left" alt=""/>
 <p><strong>DAY 8</strong>.</p>
 <p>The only thing we had missed up to now was a close view of the loricato (palebark) pines, so we dedicated the last day of the tour to climbing up <strong>Monte Pollinello</strong>. By noon we were at 1800 metres, having negotiated the stony pathways so far. Peppe discretely estimated that our footwaer was not suited to the rough terrain above this level, and as rain was forecast, we had lunch under some trees, within touching distance of the first loricati, which begin to grow only at an altitude where the beeches end. There was a wonderful view - one among many in the park - and a cooling breeze. On the way back we passed a spot through which <strong>Norman Douglas once walked when he ascended Mount Pollino</strong> (the name of the mountain and the park probably derives from that of the Greek god Apollo), and Peppe, precise as always, suddenly retrieved from a pathside tree an individual beetle, a beautiful specimen of the locally rare <strong>Rosalia Alpina</strong>. <br/>
 We paid a brief visit to the refuge we had seen on our first day, visited an old watermill, photographed lizards, and ate blackberries (the month was now August). <br/>
 We thanked our kind host Vincenzo, and while the others left for Castrovillari to continue towards Lecce, Giuseppe generously accompanied my wife and I to Maratea and saw us off on the northbound train.</p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
+	{% endbox %}
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">ORCHIDS</div>
-<a href="english/orchid.html"><b>Diary of one Orchids Hunter</b></a>
-<div class="line"><br/></div>
-	</div>
-	<div style="clear:both;">
-		<div class="rightColumnTitle">What says “Lonely planet” about us</div>
-<a href="guida.html"><b>Guide</b></a><br/>“for an English speaking guide, contact Giuseppe Cosenza, at Asklepios”<br/><br/><a href="agriturismo/asklepios.html"><b>Agriturismo Asklepios</b></a><br/>“Despite its rather dour exterior the Asklepios, in Rotonda, is the place to stay for walkers as it is run by Giuseppe Cosenza, one of the only English speaking guides in the Pollino. There are only three rooms so advance booking is essential.”<br/><br/><a href="ristorantedapeppe.html"><b>Da Peppe Restaurant</b></a><br/>“… in Rotonda… serve an impressive menu of local specialities heavy on gamey meats any fresh vegetables”
-<div class="line"><br/></div>
-	</div>
-	<div style="clear:both;">
-		<div class="rightColumnTitle">SECRETS OF SOUTHERN ITALY WALK</div>
+	
+  {% smallbox "Orchids" %}
+<a href="/english/orchid.html"><b>Diary of one Orchids Hunter</b></a>
+	{% endbox %}
+  {% smallbox "What “Lonely planet” says about us" %}
+<a href="/guida_pollino.html"><b>Guide</b></a><br/>“for an English speaking guide, contact Giuseppe Cosenza, at Asklepios”<br/><br/><a href="agriturismo/asklepios.html"><b>Agriturismo Asklepios</b></a><br/>“Despite its rather dour exterior the Asklepios, in Rotonda, is the place to stay for walkers as it is run by Giuseppe Cosenza, one of the only English speaking guides in the Pollino. There are only three rooms so advance booking is essential.”<br/><br/><a href="ristorantedapeppe.html"><b>Da Peppe Restaurant</b></a><br/>“… in Rotonda… serve an impressive menu of local specialities heavy on gamey meats any fresh vegetables”
+	{% endbox %}
+  {% smallbox "Secrets of a Southern Italy Walk" %}
 Would you like a wonderful guided&nbsp;walking&nbsp;in Pollino?<br/><br/>Headwater&nbsp;travel agency&nbsp;organises 6 weeks for you in&nbsp;Basilicata: Pollino and Maratea<br/><br/><b><a href="http://www.headwater.com/cgi-bin/itinerary.cgi?W07BA">www.headwater.com</a></b>
-<div class="line"><br/></div>
-	</div>
-	<div style="clear:both;">
-		<div class="rightColumnTitle">Old Calabria<br/>By Norman Douglas</div>
+	{% endbox %}
+  {% smallbox "Old Calabria<br/>By Norman Douglas"%}
 Following Norman Douglas, a&nbsp;special "Guide" to visit Pollino, Basilicata, Calabria and South Italy<br/><br/>Chapter&nbsp; XIX<br/><b><a href="http://www.authorama.com/old-calabria-19.html">UPLANDS OF POLLINO</a> </b><br/><br/>Chapter XX<br/><b><a href="http://www.authorama.com/old-calabria-20.html">A MOUNTAIN FESTIVAL</a></b>
-	</div>
+	{% endbox %}
 {% endblock %}
