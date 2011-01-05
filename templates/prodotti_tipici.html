@@ -1,44 +1,24 @@
   {% extends "base.html" %}
-{% block title %}
- Viaggiare nel Parco Nazionale del Pollino... portando a casa i suoi sapori, odori e colori
-{% endblock %}
+{% block title %}Prodotti tipici del Parco Nazionale Del Pollino{% endblock %}
+{% block header %}Prodotti tipici del Parco Nazionale Del Pollino{% endblock %}
 
 {% block body %}
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<h2>PRODOTTI DI STAGIONE DISPONIBILI</h2>
+{% load box %}
+{% load call %}
+  {% local "Porta a casa i suoi sapori, odori e colori" "prodotti_tipici/mainColumnParagraphs/0/image/cestino.jpg" left horizontal %}
 More <br />Lamponi<br />Pomodori da insalata e per salsa<br />Melanzane<br />Melanzane rosse<br />Peperoni<br />Zucchine<br />Fagioli in granella freschi<br />Fagiolini in baccello o &quot;cornetti&quot;<br />Fiori di Zucca<br />Mais<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="prodotti_tipici/mainColumnParagraphs/0/image/cestino.jpg" class="contentImage_left" alt=""/>
-	<h2>Cestino di prodotti tipici</h2>
 Un assortimento di prodotti tipici del Pollino, una raccolta di sapori<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-In questa pagina<br/>
 <br/>
-I prodotti agricoli dell<span>'</span><a href="prodotti_tipici/agricoli.html" >Azienda Agricola Attadia</a>: Melanzana Rossa, Legumi e Ortaggi<br/>
+<br/>
+<br/>
+I prodotti agricoli dell'<a href="prodotti_tipici/agricoli.html" >Azienda Agricola Attadia</a>: Melanzana Rossa, Legumi e Ortaggi<br/>
 <br/>
 La <a href="prodotti_tipici/negozio.html" >Bottega di Flavia De Marco</a> con prodotti tipici lucani e non solo<br/>
 <br/>
 Il <a href="prodotti_tipici/oliodioliva.html" >Frantoio di Tedesco Franco,</a> vincitore del premio Olivarum nel 2005<br/>
-<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
+{% endbox %}
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">INFO ACQUISTI</div>
-Per acquisti scrivere a <a href="contatti.html">Contatti</a><br/>Telefono <b><br/>0973.669290</b> - <b>347.2631462<br/></b>Ore ufficio dalle 14 alle 20
-	</div>
+  {% call "slideshow.html" set_id="72157603776853640" %}
+  {% call "info.html" %}
 {% endblock %}

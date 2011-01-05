@@ -1,41 +1,24 @@
 {% extends "base.html" %}
-{% block title %}
-{% endblock %}
+{% block title %}Azienda agricola Attadia{% endblock %}
+{% block header %}Azienda agricola Attadia{% endblock %}
+{% block keywords %}Fagioli, Melanzane, Pomodori, Pollino{% endblock %}
 
 {% block body %}
-	<div style="clear:both;">
-			<div class="line"><br/></div>
+{% load box %}
+  {% contentbox "Prodotti tipici del Parco Nazionale Del Pollino"%}
 	<img src="agricoli/mainColumnParagraphs/04/image/logo_attadia.jpg" class="contentImage_left" alt=""/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="agricoli/mainColumnParagraphs/0/image/azienda.jpg" class="contentImage_left" alt=""/>
-	<h2>L'azienda agricola</h2>
+	{% endbox %}
+  {% local "L'azienda agricola" "agricoli/mainColumnParagraphs/0/image/azienda.jpg" left horizontal %}
 <p>L'azienda &egrave; immersa nel verde dei boschi di quercia, in un ambiente sano e pulito, lontano da qualsiasi fonte di inquinamento industriale. </p>
 <p>Garantisce il Parco Nazionale del Pollino</p>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
-	<div style="clear:both;">
-			<div class="line"><br/></div>
-	<img src="agricoli/mainColumnParagraphs/00/image/pollino.jpg" class="contentImage_left" alt=""/>
-	<h2>PRODOTTI CERTIFICATI</h2>
+	{% endbox %}
+  {% local "Prodotti certificati" "agricoli/mainColumnParagraphs/00/image/pollino.jpg" right horizontal %}
 I nostri prodotti <a href="/prodotti_tipici/agricoli/confezionati.html" >confezionati </a>sono certificati dall'Ente Parco Nazionale del Pollino.<br/>
 Questo marchio garantisce l'origine del prodotto e la sicurezza che sono stati coltivati in ambienti sani e puliti.<br/>
-Attenti al marchio riportato sulle confezioni, deve essere uguale a quello riportato qui a sinistra.<br/>
-<br/>
-	</div>
-	<div style="clear:both;">
-			<br/><br/>
-	</div>
+Attenti al marchio riportato sulle confezioni, deve essere uguale a quello riportato qui a destra.<br/>
+	{% endbox %}
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">INFO ACQUISTI</div>
-Per acquisti scrivere a <a href="/contatti.html">Contatti</a><br/>Telefono <b><br/>0973.669290</b> - <b>347.2631462<br/></b>Ore ufficio dalle 14 alle 20
-	</div>
+  {% load call %}
+  {% call "info.html" %}
 {% endblock %}
