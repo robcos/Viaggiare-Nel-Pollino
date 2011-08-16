@@ -50,6 +50,8 @@ def legacy(request):
     return HttpResponsePermanentRedirect("/")
   if path == "guida.html":
     return HttpResponsePermanentRedirect("/guida_pollino.html")
+  if path == "prezzi.html":
+    return HttpResponsePermanentRedirect("/")
   if path == "":
     path = "index.html"
   try:
