@@ -3,7 +3,7 @@
 {% block header %}Agriturismo Civarra{% endblock %}
 {% block body %}
   {% load box %}
-  
+
   {% flickr "Nella quiete del Parco Nazionale del Pollino" "4127/5198363933_ee268de2f0_m.jpg" left horizontal %}
   L&rsquo;Azienda Agrituristica Civarra &egrave; di propriet&agrave; di Maria Teresa Malancone. Si trova a circa 800 metri s.l.m. sul verde pendio di una valle racchiusa tra boschi, con vista&nbsp; sulla Valle del Mercure e sul centro abitato di Rotonda, da cui dista circa 6 km.
 	{% endbox %}
@@ -20,7 +20,7 @@
 	{% endbox %}
 
 	{% flickr "Ristorazione" "4144/5198377211_639fefbc51.jpg" right horizontal %}
-  <p>Il fabbricato piccolo &egrave; destinato alla ristorazione, per un massimo di <strong>30 posti a sedere</strong>. 
+  <p>Il fabbricato piccolo &egrave; destinato alla ristorazione, per un massimo di <strong>30 posti a sedere</strong>.
   La sala da pranzo &egrave; localizzata in un secondo fabbricato, con cucina al piano seminterrato, e un locale al primo piano, con ampio terrazzo, destinato all&rsquo;esposizione e alla vendita di prodotti tipici locali.</p>
   <p class="important">La cucina &egrave; aperta solo su prenotazione</p>
 	{% endbox %}
@@ -39,7 +39,7 @@ Si producono foraggi e cereali, destinati all&rsquo;allevamento, e pomodori, pat
 	{% flickr "Area relax" "4126/5198365295_d319b92ede_m.jpg" right horizontal %}
     L'agriturismo &egrave; dotato di comode aree relax per trascorrere le miti sere d'estate in totale tranquillit&agrave;.
 	{% endbox %}
-  
+
 	{% flickr "Svaghi e tempo libero" "2270/2171697643_2237e3df32_m.jpg" left horizontal %}
 Chi ama la natura potr&agrave; avventurarsi in escursioni guidate sui sentieri del Pollino, passeggiare a cavallo
 , presso strutture convenzionate presenti sul territorio, praticare sci da fondo, Rafting. <br/>
@@ -53,15 +53,16 @@ Chi ama la natura potr&agrave; avventurarsi in escursioni guidate sui sentieri d
   {% call "slideshow.html" set_id="72157603780127793" %}
    {% smallbox Informazioni e prenotazioni %}
       <ul class="phones">
-        <li>tel. 0973.669152</li>
+        <li>cell. 349.3119893</li>
         <li>cell. 333.6172107</li>
         <li>cell. 328.1088952</li>
       </ul>
    {% endbox%}
- 
+{% comment %}
   {% smallbox "Tariffe Agriturismo"%}
 Pernottamento&nbsp;con&nbsp;prima colazione <b>€&nbsp;25</b> a persona<br/><span><br/>Mezza pensione</span><br/>Camera matrimoniale <b>€ 45 </b>a persona<br/><br/>Riduzioni<br/>Ragazzi fino a 4 anni Gratis<br/>Ragazzi tra 4 e&nbsp;9 anni&nbsp; 30%<br/><b>Pranzo</b> <b>€ 16–18</b> circa in funzione del menù
    {% endbox%}
+{% endcomment %}
    {% call "escursioni.html" %}
    {% call "prenota_visita.html" %}
 {% endblock %}

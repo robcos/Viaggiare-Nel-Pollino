@@ -211,11 +211,8 @@ NON DISPONIBILE<br/>
 	</div>
 {% endblock %}
 {% block right %}
-	<div style="clear:both;">
-		<div class="rightColumnTitle">INFO ACQUISTI</div>
-Per acquisti scrivere a <a href="/contatti.html">Contatti</a><br/>Telefono <b><br/>0973.669290</b> - <b>347.2631462<br/></b>Ore ufficio dalle 14 alle 20
-<div class="line"><br/></div>
-	</div>
+  {% load call %}
+  {% call "info.html" %}
 	<div style="clear:both;">
 		<div class="rightColumnTitle">DOVE ACQUISTARE IN NOSTRI PRODOTTI NELLA VOSTRA CITTA'</div>
 <b>Atena Lucana (SA)<br/><br/>Bari<br/><br/>Battipaglia (SA)<br/><br/>Castrovillari (CS)<br/><br/>Cosenza<br/><br/>Lagonegro (PZ)<br/><br/>Lauria (PZ)<br/><br/>Latronico (PZ)<br/><br/>Matera <br/><br/>Maratea (PZ)<br/><br/>Padula (SA)<br/><br/>Potenza<br/><br/>Roma<br/><br/>Rotonda (PZ)<br/></b>Flavia de Marco<br/><br/><b>Salerno<br/><br/>Taranto<br/>&nbsp;<br/>Torino<br/><br/>Venosa (PZ)</b>
