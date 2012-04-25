@@ -69,7 +69,8 @@
 <div class="yui3-g noisy-back">
         <div class="yui3-u-1">
            <h1>Viaggiare nel Parco Pollino</h1>
-          <h2>Un esperienza da fare</h2>
+          <h2>Un esperienza da fare{% if page.path == "/rafting.html" %}class
+{% endif %}</h2>
         </div>
         <div class="yui3-u-1 r" id="top-menu">
           <a href="/">Home</a> |
@@ -105,7 +106,7 @@
         {% include "_bottom.html" %}
         {% endif %}
         <div class="yui3-u-1" id="footer">
-          Tutti i diritti riservati <a href="#">Viaggiare nel Pollino</a> by <a href="http://robcos.com">Roberto Cosenza</a>
+          Tutti i diritti riservati <a href="/">Viaggiare nel Pollino</a> by <a href="http://robcos.com">Roberto Cosenza</a>
         </div>
     </div>
 {% if is_admin %}
