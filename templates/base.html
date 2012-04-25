@@ -11,6 +11,7 @@
 {% if is_admin %}
   <script src="closure-library/closure/goog/base.js"></script>
   <script src="editor.js"></script>
+<!--
   <link rel="stylesheet" href="/closure-library/closure/goog/css/common.css">
 
   <link rel="stylesheet" href="/closure-library/closure/goog/css/button.css" />
@@ -31,10 +32,11 @@
   <link rel="stylesheet" href="/closure-library/closure/goog/css/editor/dialog.css" />
   <link rel="stylesheet" href="/closure-library/closure/goog/css/editor/linkdialog.css" />
   <link rel="stylesheet" href="/closure-library/closure/goog/css/editortoolbar.css" />
-
+-->
 {% endif %}
   <link rel="stylesheet" type="text/css" href="/reset-fonts-grids.css">
   <link rel="stylesheet" type="text/css" href="/base.css">
+  <link rel="stylesheet" href="/grids-min.css" />
   <link rel="stylesheet" type="text/css" href="/custom.css">
 {% if validate %}
   <script type="text/javascript">
@@ -46,57 +48,120 @@
     }
   </script>
 {% endif %}
+<!--
   <link rel="stylesheet" type="text/css" href="/style.css">
+-->
+<style>
+  body {
+    margin: auto; /* center in viewport */
+    width: 1024px;
+  }
+  .main {
+    background-color:green;
+  }
+  .y { background-color:yellow}
+  .r { background-color:red}
+  .b { background-color:blue}
+
+</style>
 </head>
 <body>
+<div class="yui3-g noisy-back">
+        <div class="yui3-u-1">
+           <h1>Viaggiare nel Parco Pollino</h1>
+          <h2>Un esperienza da fare</h2>
+        </div>
+        <div class="yui3-u-1 r" id="top-menu">
+          <a href="#">Home</a> |
+          <a href="#">Prenota</a> |
+          <a href="#">Come raggiungerci</a> |
+          <a href="#">Meteo</a> |
+          <a href="#">Contatti</a>
+        </div>
+        <div class="yui3-u-4-5 selectors">
+          <div class="yui3-u-1-3 vbar soggiorno b">
+            <a href="#">Soggiorno</a>
+          </div><div class="yui3-u-1-3 vbar escursioni r">
+            <a href="#">Escursioni</a>
+          </div><div class="yui3-u-1-3 vbar rafting y">
+            <a href="#">Rafting</a>
+          </div>
+        </div>
+        <div class="yui3-u-1-5 right-menu">
+           <div class="rightlink prenota">
+              <a href="#">Prenota!</a>
+            </div>
+            <div class="rightlink soggiorno">
+              <a href="#">Soggiorno</a>
+            </div>
+            <div class="rightlink escursioni">
+              <a href="#">Escursioni</a>
+            </div>
+            <div class="rightlink rafting">
+              <a href="#">Rafting</a>
+            </div>
+        </div>
+        <div class="yui3-u-4-5">
+          <div class="yui3-u-1-2 cell r">
+            <h3>Andare a cavallo</h3>
+            <!--<p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>-->
+            <img src="cell.png" />
+            <!--<a href="#">Approfondisci &raquo;</a><-->
+          </div><div class="yui3-u-1-2 cell b">
+            <img src="cell.png" />
+            <h3>Visite guidate</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#">Approfondisci &raquo;</a>
+          </div><div class="yui3-u-1-2 cell">
+            <img src="cell.png" />
+            <h3>Rafting</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#">Approfondisci &raquo;</a>
+          </div><div class="yui3-u-1-2 cell r">
+            <img src="cell.png" />
+            <h3>Andare a pesca</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#">Approfondisci &raquo;</a>
+          </div>
+        </div>
+        <div class="yui3-u-1-5 y">
+          <h1>Some other menu</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+        <div class="yui3-u-1" id="footer">
+          Tutti i diritti riservati <a href="#">Viaggiare nel Pollino</a> by <a href="http://robcos.com">Roberto Cosenza</a>
+        </div>
+    </div>
 {% if is_admin %}
 <div id="editor"></div>
 {% endif %}
-
-<div id="doc4" class="yui-t2">
-  <div id="hd">
-    <!-- MASTHEAD START -->
-    <div id="headerImage"><img src="/docroot/samples/imgs/header.jpg" alt="Pollino - Logo" width="974"/><br/></div>
-    <!-- MASTHEAD END -->
-  </div>
-  <div id="bd">
-    <div id="yui-main">
-      <div class="yui-b">
-        <div class="yui-ge">
-          <div class="yui-u first">
-            <!-- MAIN COLUMN 1 START -->
-            <h1 id="site-title">{% header %}{% block header %}Viaggiare nel pollino{% endblock %}{% endheader %}</h1>
-            {% block body %} Body {% endblock %}
-            <!-- MAIN COLUMN 1 END -->
-          </div>
-          <div class="yui-u">
-            <!-- MAIN COLUMN 2 START -->
-            {% block right%} right {% endblock %}
-            {% include "_right.html" %}
-            <!-- MAIN COLUMN 2 END -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="yui-b">
-      <!-- SECONDARY COLUMN START -->
-      <div id="navDiv">
-        {% include "_menu.html" %}
-        {% include "_leftad.html" %}
-      </div>
-      <!-- SECONDARY COLUMN END -->
-    </div>
-  </div>
-  <div id="ft">
-    <!-- FOOTER START -->
-    {% include "_footer.html" %}
-    <!-- FOOTER END -->
-  </div>
 </div>
 </body>
 {% if not validate %}
 {% include "_analytics.html" %}
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=robcos"></script> 
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=robcos"></script>
 {% endif %}
  {% if is_admin %}
   <script type="text/javascript">
