@@ -14,10 +14,10 @@ def do_local(parser, token):
     nodelist = parser.parse(('endbox',))
     parser.delete_first_token()
     tag_name, title, img, side, orientation = token.split_contents()
-    title = strip(title) 
-    img = strip(img) 
-    side = strip(side) 
-    orientation = strip(orientation) 
+    title = strip(title)
+    img = strip(img)
+    side = strip(side)
+    orientation = strip(orientation)
     if orientation == "vertical":
       height = "240"
       width = "180"
@@ -32,11 +32,11 @@ def do_local_linked(parser, token):
     nodelist = parser.parse(('endbox',))
     parser.delete_first_token()
     tag_name, title, img, side, orientation, link = token.split_contents()
-    title = strip(title) 
-    img = strip(img) 
-    side = strip(side) 
-    orientation = strip(orientation) 
-    link = strip(link) 
+    title = strip(title)
+    img = strip(img)
+    side = strip(side)
+    orientation = strip(orientation)
+    link = strip(link)
     if orientation == "vertical":
       height = "240"
       width = "180"
@@ -45,17 +45,17 @@ def do_local_linked(parser, token):
       width = "240"
     #img = "http://farm5.static.flickr.com/" + img
 
-    return FlickrNode(nodelist, title, None, img, side, 
+    return FlickrNode(nodelist, title, None, img, side,
         width, height, "local_linked_contentbox.html", link)
 
 def do_flickr(parser, token):
     nodelist = parser.parse(('endbox',))
     parser.delete_first_token()
     tag_name, title, img, side, orientation = token.split_contents()
-    title = strip(title) 
-    img = strip(img) 
-    side = strip(side) 
-    orientation = strip(orientation) 
+    title = strip(title)
+    img = strip(img)
+    side = strip(side)
+    orientation = strip(orientation)
     photo_id = re.search('.*/(\d*)_.*', img).group(1)
     if orientation == "vertical":
       height = "240"
@@ -146,7 +146,7 @@ def strip(header):
   if header[0] == header[-1] == '\'':
     header = header.strip('\'')
   return header
- 
+
 class FlickrNode(template.Node):
   def __init__(self, nodelist, title, href, src, side, width, height, template="flickr_contentbox.html", link=None):
     self.nodelist = nodelist
@@ -162,7 +162,7 @@ class FlickrNode(template.Node):
   def render(self, context):
     output = self.nodelist.render(context)
     return app_template.render(os.path.join(os.path.dirname(__file__), self.template),
-        { "title": self.title, "href": self.href, "src": self.src, 
+        { "title": self.title, "href": self.href, "src": self.src,
         "side": self.side, "height": self.height, "width" : self.width,
         "header": self.title, "content": output, "link": self.link})
 
@@ -180,10 +180,10 @@ class SnippetNode(template.Node):
       args.append(i.resolve(context))
     for key, value in self.kwargs.items():
       kwargs[key] = d[key] = value.resolve(context)
-    
+
     context.update(d)
 
-    return app_template.render(os.path.join(os.path.dirname(__file__), 
+    return app_template.render(os.path.join(os.path.dirname(__file__),
       self.snippet), context)
 
 class ContentNode(template.Node):
@@ -209,8 +209,8 @@ class ContentNode(template.Node):
       "content": node.content, #deprecated
       "node": node
     })
- 
-    return app_template.render(os.path.join(os.path.dirname(__file__), 
+
+    return app_template.render(os.path.join(os.path.dirname(__file__),
       self.template), context)
 
 
@@ -226,7 +226,7 @@ class SmallBoxNode(template.Node):
       "header": self.header,
       "content": content
     })
-    return app_template.render(os.path.join(os.path.dirname(__file__), 
+    return app_template.render(os.path.join(os.path.dirname(__file__),
       self.template), context)
 
 class OnlyOnMonthNode(template.Node):
@@ -255,7 +255,7 @@ class PageAttributeNode(template.Node):
     value = self.nodelist.render(context)
     page = context['page']
     if page.__dict__[self.attribute] == None:
-      page.__dict__[self.attribute] = str(value)
+      page.__dict__[self.attribute] = unicode(value)
       page.put()
     return page.__dict__[self.attribute]
 
