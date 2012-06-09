@@ -204,7 +204,7 @@ p.important {
   color: green;
   font-style: italic;
   font-weight: bold;
-  
+
 }
 
 li {
@@ -226,7 +226,7 @@ li {
 a.admin {
   color:red;
 }
- 
+
 #/node/small/info/title {
   background-color: red;
 }

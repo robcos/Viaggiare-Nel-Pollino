@@ -214,7 +214,7 @@ input.checkbox, input.radio
 	top:3px;
 	margin-right:6px;
 	}
-	
+
 #content {
   border-width: 3px;
   -moz-border-radius: 3px;
@@ -237,7 +237,7 @@ input.checkbox, input.radio
 	text-align:right;
 	}
 div {
-	
+
 	border: 0px;
 	}
 #clear {clear: both;}
